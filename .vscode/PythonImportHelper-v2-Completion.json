@@ -1,0 +1,930 @@
+[
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "sleep",
+        "importPath": "time",
+        "description": "time",
+        "isExtraImport": true,
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "argparse",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "argparse",
+        "description": "argparse",
+        "detail": "argparse",
+        "documentation": {}
+    },
+    {
+        "label": "ArgumentParser",
+        "importPath": "argparse",
+        "description": "argparse",
+        "isExtraImport": true,
+        "detail": "argparse",
+        "documentation": {}
+    },
+    {
+        "label": "gr",
+        "importPath": "gnuradio",
+        "description": "gnuradio",
+        "isExtraImport": true,
+        "detail": "gnuradio",
+        "documentation": {}
+    },
+    {
+        "label": "blocks",
+        "importPath": "gnuradio",
+        "description": "gnuradio",
+        "isExtraImport": true,
+        "detail": "gnuradio",
+        "documentation": {}
+    },
+    {
+        "label": "fft",
+        "importPath": "gnuradio",
+        "description": "gnuradio",
+        "isExtraImport": true,
+        "detail": "gnuradio",
+        "documentation": {}
+    },
+    {
+        "label": "filter",
+        "importPath": "gnuradio",
+        "description": "gnuradio",
+        "isExtraImport": true,
+        "detail": "gnuradio",
+        "documentation": {}
+    },
+    {
+        "label": "soapy",
+        "importPath": "gnuradio",
+        "description": "gnuradio",
+        "isExtraImport": true,
+        "detail": "gnuradio",
+        "documentation": {}
+    },
+    {
+        "label": "qtgui",
+        "importPath": "gnuradio",
+        "description": "gnuradio",
+        "isExtraImport": true,
+        "detail": "gnuradio",
+        "documentation": {}
+    },
+    {
+        "label": "analog",
+        "importPath": "gnuradio",
+        "description": "gnuradio",
+        "isExtraImport": true,
+        "detail": "gnuradio",
+        "documentation": {}
+    },
+    {
+        "label": "audio",
+        "importPath": "gnuradio",
+        "description": "gnuradio",
+        "isExtraImport": true,
+        "detail": "gnuradio",
+        "documentation": {}
+    },
+    {
+        "label": "filter",
+        "importPath": "gnuradio",
+        "description": "gnuradio",
+        "isExtraImport": true,
+        "detail": "gnuradio",
+        "documentation": {}
+    },
+    {
+        "label": "gr",
+        "importPath": "gnuradio",
+        "description": "gnuradio",
+        "isExtraImport": true,
+        "detail": "gnuradio",
+        "documentation": {}
+    },
+    {
+        "label": "eng_notation",
+        "importPath": "gnuradio",
+        "description": "gnuradio",
+        "isExtraImport": true,
+        "detail": "gnuradio",
+        "documentation": {}
+    },
+    {
+        "label": "soapy",
+        "importPath": "gnuradio",
+        "description": "gnuradio",
+        "isExtraImport": true,
+        "detail": "gnuradio",
+        "documentation": {}
+    },
+    {
+        "label": "qtgui",
+        "importPath": "gnuradio",
+        "description": "gnuradio",
+        "isExtraImport": true,
+        "detail": "gnuradio",
+        "documentation": {}
+    },
+    {
+        "label": "window",
+        "importPath": "gnuradio.fft",
+        "description": "gnuradio.fft",
+        "isExtraImport": true,
+        "detail": "gnuradio.fft",
+        "documentation": {}
+    },
+    {
+        "label": "window",
+        "importPath": "gnuradio.fft",
+        "description": "gnuradio.fft",
+        "isExtraImport": true,
+        "detail": "gnuradio.fft",
+        "documentation": {}
+    },
+    {
+        "label": "RtlSdr",
+        "importPath": "rtlsdr",
+        "description": "rtlsdr",
+        "isExtraImport": true,
+        "detail": "rtlsdr",
+        "documentation": {}
+    },
+    {
+        "label": "RtlSdr",
+        "importPath": "rtlsdr",
+        "description": "rtlsdr",
+        "isExtraImport": true,
+        "detail": "rtlsdr",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "matplotlib.pyplot",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "matplotlib.pyplot",
+        "description": "matplotlib.pyplot",
+        "detail": "matplotlib.pyplot",
+        "documentation": {}
+    },
+    {
+        "label": "FuncAnimation",
+        "importPath": "matplotlib.animation",
+        "description": "matplotlib.animation",
+        "isExtraImport": true,
+        "detail": "matplotlib.animation",
+        "documentation": {}
+    },
+    {
+        "label": "find_peaks",
+        "importPath": "scipy.signal",
+        "description": "scipy.signal",
+        "isExtraImport": true,
+        "detail": "scipy.signal",
+        "documentation": {}
+    },
+    {
+        "label": "StrictVersion",
+        "importPath": "distutils.version",
+        "description": "distutils.version",
+        "isExtraImport": true,
+        "detail": "distutils.version",
+        "documentation": {}
+    },
+    {
+        "label": "Qt",
+        "importPath": "PyQt5",
+        "description": "PyQt5",
+        "isExtraImport": true,
+        "detail": "PyQt5",
+        "documentation": {}
+    },
+    {
+        "label": "firdes",
+        "importPath": "gnuradio.filter",
+        "description": "gnuradio.filter",
+        "isExtraImport": true,
+        "detail": "gnuradio.filter",
+        "documentation": {}
+    },
+    {
+        "label": "sip",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sip",
+        "description": "sip",
+        "detail": "sip",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "signal",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "signal",
+        "description": "signal",
+        "detail": "signal",
+        "documentation": {}
+    },
+    {
+        "label": "eng_float",
+        "importPath": "gnuradio.eng_arg",
+        "description": "gnuradio.eng_arg",
+        "isExtraImport": true,
+        "detail": "gnuradio.eng_arg",
+        "documentation": {}
+    },
+    {
+        "label": "intx",
+        "importPath": "gnuradio.eng_arg",
+        "description": "gnuradio.eng_arg",
+        "isExtraImport": true,
+        "detail": "gnuradio.eng_arg",
+        "documentation": {}
+    },
+    {
+        "label": "sounddevice",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sounddevice",
+        "description": "sounddevice",
+        "detail": "sounddevice",
+        "documentation": {}
+    },
+    {
+        "label": "signal",
+        "importPath": "scipy",
+        "description": "scipy",
+        "isExtraImport": true,
+        "detail": "scipy",
+        "documentation": {}
+    },
+    {
+        "label": "MotorController",
+        "importPath": "MotorTools",
+        "description": "MotorTools",
+        "isExtraImport": true,
+        "detail": "MotorTools",
+        "documentation": {}
+    },
+    {
+        "label": "RPi.GPIO",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "RPi.GPIO",
+        "description": "RPi.GPIO",
+        "detail": "RPi.GPIO",
+        "documentation": {}
+    },
+    {
+        "label": "Horizons",
+        "importPath": "astroquery.jplhorizons",
+        "description": "astroquery.jplhorizons",
+        "isExtraImport": true,
+        "detail": "astroquery.jplhorizons",
+        "documentation": {}
+    },
+    {
+        "label": "Time",
+        "importPath": "astropy.time",
+        "description": "astropy.time",
+        "isExtraImport": true,
+        "detail": "astropy.time",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timezone",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "TelescopeOperations",
+        "importPath": "FindTelescopeChangeNeeded",
+        "description": "FindTelescopeChangeNeeded",
+        "isExtraImport": true,
+        "detail": "FindTelescopeChangeNeeded",
+        "documentation": {}
+    },
+    {
+        "label": "Motor",
+        "importPath": "gpiozero",
+        "description": "gpiozero",
+        "isExtraImport": true,
+        "detail": "gpiozero",
+        "documentation": {}
+    },
+    {
+        "label": "RotaryEncoder",
+        "importPath": "gpiozero",
+        "description": "gpiozero",
+        "isExtraImport": true,
+        "detail": "gpiozero",
+        "documentation": {}
+    },
+    {
+        "label": "spectrum_recorder",
+        "kind": 6,
+        "importPath": "GNURadioCode.recordspectrum",
+        "description": "GNURadioCode.recordspectrum",
+        "peekOfCode": "class spectrum_recorder(gr.top_block):\n    def __init__(self, outfile, samp_rate, center_freq, gain,\n                 fft_size, alpha, bw, keep_one_in_n):\n        gr.top_block.__init__(self, \"DAWC Spectrum Recorder\")\n        # ---- Soapy RTL-SDR Source (\"Take input from the RTL-SDR\") ------\n        dev = 'driver=rtlsdr'\n        self.src = soapy.source(dev, \"fc32\", 1, '', '', [''], [''])\n        self.src.set_sample_rate(0, samp_rate)\n        self.src.set_gain_mode(0, False)            # manual gain (AGC off)\n        self.src.set_frequency(0, center_freq)",
+        "detail": "GNURadioCode.recordspectrum",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "GNURadioCode.recordspectrum",
+        "description": "GNURadioCode.recordspectrum",
+        "peekOfCode": "def main():\n    p = argparse.ArgumentParser(description=\"Record averaged spectra (paper Figure 4).\")\n    p.add_argument('outfile', help='output file, e.g. stationary.dat or rotating.dat')\n    p.add_argument('--seconds', type=float, default=600.0,\n                   help='record time in seconds (default 600 = 10 min, as in the paper)')\n    p.add_argument('--samp-rate', type=float, default=2.4e6)\n    p.add_argument('--center-freq', type=float, default=1.42041e9,\n                   help='hydrogen-line band centre (Hz)')\n    p.add_argument('--gain', type=float, default=40.0)\n    p.add_argument('--fft-size', type=int, default=8192,",
+        "detail": "GNURadioCode.recordspectrum",
+        "documentation": {}
+    },
+    {
+        "label": "update",
+        "kind": 2,
+        "importPath": "GNURadioCode.rtlsdrtest",
+        "description": "GNURadioCode.rtlsdrtest",
+        "peekOfCode": "def update(frame):\n    samples = sdr.read_samples(FFT_SIZE)\n    fft_vals = np.fft.fftshift(np.fft.fft(samples))\n    power = np.abs(fft_vals)**2\n    power_db = 10*np.log10(power + 1e-12)\n    line.set_ydata(power_db)\n    return line,\nani = FuncAnimation(fig, update, interval=50, blit=True)\ntry:\n    plt.show()",
+        "detail": "GNURadioCode.rtlsdrtest",
+        "documentation": {}
+    },
+    {
+        "label": "CENTER_FREQ",
+        "kind": 5,
+        "importPath": "GNURadioCode.rtlsdrtest",
+        "description": "GNURadioCode.rtlsdrtest",
+        "peekOfCode": "CENTER_FREQ = 1.42041e9\nSAMPLE_RATE = 1.024e6\nFFT_SIZE = 4096\nGAIN = 30\n# --------------------------\n# Setup SDR\nsdr = RtlSdr()\nsdr.sample_rate = SAMPLE_RATE\nsdr.center_freq = CENTER_FREQ\nsdr.gain = GAIN",
+        "detail": "GNURadioCode.rtlsdrtest",
+        "documentation": {}
+    },
+    {
+        "label": "SAMPLE_RATE",
+        "kind": 5,
+        "importPath": "GNURadioCode.rtlsdrtest",
+        "description": "GNURadioCode.rtlsdrtest",
+        "peekOfCode": "SAMPLE_RATE = 1.024e6\nFFT_SIZE = 4096\nGAIN = 30\n# --------------------------\n# Setup SDR\nsdr = RtlSdr()\nsdr.sample_rate = SAMPLE_RATE\nsdr.center_freq = CENTER_FREQ\nsdr.gain = GAIN\n# Frequency axis",
+        "detail": "GNURadioCode.rtlsdrtest",
+        "documentation": {}
+    },
+    {
+        "label": "FFT_SIZE",
+        "kind": 5,
+        "importPath": "GNURadioCode.rtlsdrtest",
+        "description": "GNURadioCode.rtlsdrtest",
+        "peekOfCode": "FFT_SIZE = 4096\nGAIN = 30\n# --------------------------\n# Setup SDR\nsdr = RtlSdr()\nsdr.sample_rate = SAMPLE_RATE\nsdr.center_freq = CENTER_FREQ\nsdr.gain = GAIN\n# Frequency axis\nfreqs = np.fft.fftshift(np.fft.fftfreq(FFT_SIZE, 1/SAMPLE_RATE))",
+        "detail": "GNURadioCode.rtlsdrtest",
+        "documentation": {}
+    },
+    {
+        "label": "GAIN",
+        "kind": 5,
+        "importPath": "GNURadioCode.rtlsdrtest",
+        "description": "GNURadioCode.rtlsdrtest",
+        "peekOfCode": "GAIN = 30\n# --------------------------\n# Setup SDR\nsdr = RtlSdr()\nsdr.sample_rate = SAMPLE_RATE\nsdr.center_freq = CENTER_FREQ\nsdr.gain = GAIN\n# Frequency axis\nfreqs = np.fft.fftshift(np.fft.fftfreq(FFT_SIZE, 1/SAMPLE_RATE))\nabsolute_freqs = freqs + CENTER_FREQ",
+        "detail": "GNURadioCode.rtlsdrtest",
+        "documentation": {}
+    },
+    {
+        "label": "sdr",
+        "kind": 5,
+        "importPath": "GNURadioCode.rtlsdrtest",
+        "description": "GNURadioCode.rtlsdrtest",
+        "peekOfCode": "sdr = RtlSdr()\nsdr.sample_rate = SAMPLE_RATE\nsdr.center_freq = CENTER_FREQ\nsdr.gain = GAIN\n# Frequency axis\nfreqs = np.fft.fftshift(np.fft.fftfreq(FFT_SIZE, 1/SAMPLE_RATE))\nabsolute_freqs = freqs + CENTER_FREQ\n# Setup plot\nfig, ax = plt.subplots()\nline, = ax.plot(absolute_freqs, np.zeros(FFT_SIZE))",
+        "detail": "GNURadioCode.rtlsdrtest",
+        "documentation": {}
+    },
+    {
+        "label": "sdr.sample_rate",
+        "kind": 5,
+        "importPath": "GNURadioCode.rtlsdrtest",
+        "description": "GNURadioCode.rtlsdrtest",
+        "peekOfCode": "sdr.sample_rate = SAMPLE_RATE\nsdr.center_freq = CENTER_FREQ\nsdr.gain = GAIN\n# Frequency axis\nfreqs = np.fft.fftshift(np.fft.fftfreq(FFT_SIZE, 1/SAMPLE_RATE))\nabsolute_freqs = freqs + CENTER_FREQ\n# Setup plot\nfig, ax = plt.subplots()\nline, = ax.plot(absolute_freqs, np.zeros(FFT_SIZE))\nax.set_xlabel(\"Frequency (Hz)\")",
+        "detail": "GNURadioCode.rtlsdrtest",
+        "documentation": {}
+    },
+    {
+        "label": "sdr.center_freq",
+        "kind": 5,
+        "importPath": "GNURadioCode.rtlsdrtest",
+        "description": "GNURadioCode.rtlsdrtest",
+        "peekOfCode": "sdr.center_freq = CENTER_FREQ\nsdr.gain = GAIN\n# Frequency axis\nfreqs = np.fft.fftshift(np.fft.fftfreq(FFT_SIZE, 1/SAMPLE_RATE))\nabsolute_freqs = freqs + CENTER_FREQ\n# Setup plot\nfig, ax = plt.subplots()\nline, = ax.plot(absolute_freqs, np.zeros(FFT_SIZE))\nax.set_xlabel(\"Frequency (Hz)\")\nax.set_ylabel(\"Power (dB)\")",
+        "detail": "GNURadioCode.rtlsdrtest",
+        "documentation": {}
+    },
+    {
+        "label": "sdr.gain",
+        "kind": 5,
+        "importPath": "GNURadioCode.rtlsdrtest",
+        "description": "GNURadioCode.rtlsdrtest",
+        "peekOfCode": "sdr.gain = GAIN\n# Frequency axis\nfreqs = np.fft.fftshift(np.fft.fftfreq(FFT_SIZE, 1/SAMPLE_RATE))\nabsolute_freqs = freqs + CENTER_FREQ\n# Setup plot\nfig, ax = plt.subplots()\nline, = ax.plot(absolute_freqs, np.zeros(FFT_SIZE))\nax.set_xlabel(\"Frequency (Hz)\")\nax.set_ylabel(\"Power (dB)\")\nax.set_title(\"Real-Time Spectrum\")",
+        "detail": "GNURadioCode.rtlsdrtest",
+        "documentation": {}
+    },
+    {
+        "label": "freqs",
+        "kind": 5,
+        "importPath": "GNURadioCode.rtlsdrtest",
+        "description": "GNURadioCode.rtlsdrtest",
+        "peekOfCode": "freqs = np.fft.fftshift(np.fft.fftfreq(FFT_SIZE, 1/SAMPLE_RATE))\nabsolute_freqs = freqs + CENTER_FREQ\n# Setup plot\nfig, ax = plt.subplots()\nline, = ax.plot(absolute_freqs, np.zeros(FFT_SIZE))\nax.set_xlabel(\"Frequency (Hz)\")\nax.set_ylabel(\"Power (dB)\")\nax.set_title(\"Real-Time Spectrum\")\nax.set_ylim(-80, 20)\ndef update(frame):",
+        "detail": "GNURadioCode.rtlsdrtest",
+        "documentation": {}
+    },
+    {
+        "label": "absolute_freqs",
+        "kind": 5,
+        "importPath": "GNURadioCode.rtlsdrtest",
+        "description": "GNURadioCode.rtlsdrtest",
+        "peekOfCode": "absolute_freqs = freqs + CENTER_FREQ\n# Setup plot\nfig, ax = plt.subplots()\nline, = ax.plot(absolute_freqs, np.zeros(FFT_SIZE))\nax.set_xlabel(\"Frequency (Hz)\")\nax.set_ylabel(\"Power (dB)\")\nax.set_title(\"Real-Time Spectrum\")\nax.set_ylim(-80, 20)\ndef update(frame):\n    samples = sdr.read_samples(FFT_SIZE)",
+        "detail": "GNURadioCode.rtlsdrtest",
+        "documentation": {}
+    },
+    {
+        "label": "line,",
+        "kind": 5,
+        "importPath": "GNURadioCode.rtlsdrtest",
+        "description": "GNURadioCode.rtlsdrtest",
+        "peekOfCode": "line, = ax.plot(absolute_freqs, np.zeros(FFT_SIZE))\nax.set_xlabel(\"Frequency (Hz)\")\nax.set_ylabel(\"Power (dB)\")\nax.set_title(\"Real-Time Spectrum\")\nax.set_ylim(-80, 20)\ndef update(frame):\n    samples = sdr.read_samples(FFT_SIZE)\n    fft_vals = np.fft.fftshift(np.fft.fft(samples))\n    power = np.abs(fft_vals)**2\n    power_db = 10*np.log10(power + 1e-12)",
+        "detail": "GNURadioCode.rtlsdrtest",
+        "documentation": {}
+    },
+    {
+        "label": "ani",
+        "kind": 5,
+        "importPath": "GNURadioCode.rtlsdrtest",
+        "description": "GNURadioCode.rtlsdrtest",
+        "peekOfCode": "ani = FuncAnimation(fig, update, interval=50, blit=True)\ntry:\n    plt.show()\nexcept KeyboardInterrupt:\n    pass\nfinally:\n    sdr.close()",
+        "detail": "GNURadioCode.rtlsdrtest",
+        "documentation": {}
+    },
+    {
+        "label": "load_spectrum",
+        "kind": 2,
+        "importPath": "GNURadioCode.runthis",
+        "description": "GNURadioCode.runthis",
+        "peekOfCode": "def load_spectrum(path, fft_size, mode='last'):\n    \"\"\"Return one 8192-bin spectrum: the IIR-converged last frame, or the\n    mean of every saved frame.\"\"\"\n    data = np.fromfile(path, dtype=np.float32)\n    n = data.size // fft_size\n    if n == 0:\n        raise SystemExit(f\"{path}: file too short / wrong fft-size.\")\n    frames = data[:n * fft_size].reshape(n, fft_size)\n    return frames[-1] if mode == 'last' else frames.mean(axis=0)\ndef refine_peak(spec, k):",
+        "detail": "GNURadioCode.runthis",
+        "documentation": {}
+    },
+    {
+        "label": "refine_peak",
+        "kind": 2,
+        "importPath": "GNURadioCode.runthis",
+        "description": "GNURadioCode.runthis",
+        "peekOfCode": "def refine_peak(spec, k):\n    \"\"\"3-point parabolic interpolation -> fractional bin index.\"\"\"\n    if k <= 0 or k >= len(spec) - 1:\n        return float(k)\n    a, b, c = spec[k - 1], spec[k], spec[k + 1]\n    denom = a - 2.0 * b + c\n    if denom == 0:\n        return float(k)\n    return k + 0.5 * (a - c) / denom\ndef main():",
+        "detail": "GNURadioCode.runthis",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "GNURadioCode.runthis",
+        "description": "GNURadioCode.runthis",
+        "peekOfCode": "def main():\n    p = argparse.ArgumentParser(description=\"Average RFI peak shift across all peaks.\")\n    p.add_argument('stationary', help='stationary recording (e.g. stationary.dat)')\n    p.add_argument('rotating', help='rotating recording (e.g. rotating.dat)')\n    p.add_argument('--fft-size', type=int, default=8192)\n    p.add_argument('--samp-rate', type=float, default=2.4e6)\n    p.add_argument('--center-freq', type=float, default=1.42041e9)\n    p.add_argument('--prominence', type=float, default=3.0,\n                   help='min peak prominence (dB) for a bin to count as a peak')\n    p.add_argument('--max-shift', type=float, default=2000.0,",
+        "detail": "GNURadioCode.runthis",
+        "documentation": {}
+    },
+    {
+        "label": "SDRTest",
+        "kind": 6,
+        "importPath": "GNURadioCode.SDRTest",
+        "description": "GNURadioCode.SDRTest",
+        "peekOfCode": "class SDRTest(gr.top_block, Qt.QWidget):\n    def __init__(self):\n        gr.top_block.__init__(self, \"SDRTest\", catch_exceptions=True)\n        Qt.QWidget.__init__(self)\n        self.setWindowTitle(\"SDRTest\")\n        qtgui.util.check_set_qss()\n        try:\n            self.setWindowIcon(Qt.QIcon.fromTheme('gnuradio-grc'))\n        except:\n            pass",
+        "detail": "GNURadioCode.SDRTest",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "GNURadioCode.SDRTest",
+        "description": "GNURadioCode.SDRTest",
+        "peekOfCode": "def main(top_block_cls=SDRTest, options=None):\n    if StrictVersion(\"4.5.0\") <= StrictVersion(Qt.qVersion()) < StrictVersion(\"5.0.0\"):\n        style = gr.prefs().get_string('qtgui', 'style', 'raster')\n        Qt.QApplication.setGraphicsSystem(style)\n    qapp = Qt.QApplication(sys.argv)\n    tb = top_block_cls()\n    tb.start()\n    tb.show()\n    def sig_handler(sig=None, frame=None):\n        tb.stop()",
+        "detail": "GNURadioCode.SDRTest",
+        "documentation": {}
+    },
+    {
+        "label": "F_station",
+        "kind": 5,
+        "importPath": "GNURadioCode.sdrtesting",
+        "description": "GNURadioCode.sdrtesting",
+        "peekOfCode": "F_station = 96.7e6      # KISS FM\nF_offset  = 250000      # offset-tune away from DC spike, mix back in software\nFs        = 1.2e6       # SDR sample rate\nN         = 128000      # samples per block (multiple of 512, divisible by 25)\ndec1      = 5           # 1.2 MHz -> 240 kHz\ndec2      = 5           # 240 kHz -> 48 kHz audio\nGAIN      = 'auto'      # or a number like 40\nVOLUME    = 0.3\n# --------------------------\nFs_demod   = Fs / dec1          # 240000",
+        "detail": "GNURadioCode.sdrtesting",
+        "documentation": {}
+    },
+    {
+        "label": "audio_rate",
+        "kind": 5,
+        "importPath": "GNURadioCode.sdrtesting",
+        "description": "GNURadioCode.sdrtesting",
+        "peekOfCode": "audio_rate = Fs_demod / dec2    # 48000\n# Setup SDR\nsdr = RtlSdr()\nsdr.sample_rate = Fs\nsdr.center_freq = F_station - F_offset   # tune off to the side\nsdr.gain = GAIN\n# 75 us de-emphasis filter (US standard), one-pole IIR at the demod rate\ntau   = 75e-6\nalpha = np.exp(-1.0 / (Fs_demod * tau))\nb_de, a_de = [1 - alpha], [1, -alpha]",
+        "detail": "GNURadioCode.sdrtesting",
+        "documentation": {}
+    },
+    {
+        "label": "sdr",
+        "kind": 5,
+        "importPath": "GNURadioCode.sdrtesting",
+        "description": "GNURadioCode.sdrtesting",
+        "peekOfCode": "sdr = RtlSdr()\nsdr.sample_rate = Fs\nsdr.center_freq = F_station - F_offset   # tune off to the side\nsdr.gain = GAIN\n# 75 us de-emphasis filter (US standard), one-pole IIR at the demod rate\ntau   = 75e-6\nalpha = np.exp(-1.0 / (Fs_demod * tau))\nb_de, a_de = [1 - alpha], [1, -alpha]\nzi_de = np.zeros(1)\n# State carried between blocks for glitch-free output",
+        "detail": "GNURadioCode.sdrtesting",
+        "documentation": {}
+    },
+    {
+        "label": "sdr.sample_rate",
+        "kind": 5,
+        "importPath": "GNURadioCode.sdrtesting",
+        "description": "GNURadioCode.sdrtesting",
+        "peekOfCode": "sdr.sample_rate = Fs\nsdr.center_freq = F_station - F_offset   # tune off to the side\nsdr.gain = GAIN\n# 75 us de-emphasis filter (US standard), one-pole IIR at the demod rate\ntau   = 75e-6\nalpha = np.exp(-1.0 / (Fs_demod * tau))\nb_de, a_de = [1 - alpha], [1, -alpha]\nzi_de = np.zeros(1)\n# State carried between blocks for glitch-free output\nprev_sample = 0.0 + 0.0j",
+        "detail": "GNURadioCode.sdrtesting",
+        "documentation": {}
+    },
+    {
+        "label": "sdr.center_freq",
+        "kind": 5,
+        "importPath": "GNURadioCode.sdrtesting",
+        "description": "GNURadioCode.sdrtesting",
+        "peekOfCode": "sdr.center_freq = F_station - F_offset   # tune off to the side\nsdr.gain = GAIN\n# 75 us de-emphasis filter (US standard), one-pole IIR at the demod rate\ntau   = 75e-6\nalpha = np.exp(-1.0 / (Fs_demod * tau))\nb_de, a_de = [1 - alpha], [1, -alpha]\nzi_de = np.zeros(1)\n# State carried between blocks for glitch-free output\nprev_sample = 0.0 + 0.0j\nlo_phase = 0.0",
+        "detail": "GNURadioCode.sdrtesting",
+        "documentation": {}
+    },
+    {
+        "label": "sdr.gain",
+        "kind": 5,
+        "importPath": "GNURadioCode.sdrtesting",
+        "description": "GNURadioCode.sdrtesting",
+        "peekOfCode": "sdr.gain = GAIN\n# 75 us de-emphasis filter (US standard), one-pole IIR at the demod rate\ntau   = 75e-6\nalpha = np.exp(-1.0 / (Fs_demod * tau))\nb_de, a_de = [1 - alpha], [1, -alpha]\nzi_de = np.zeros(1)\n# State carried between blocks for glitch-free output\nprev_sample = 0.0 + 0.0j\nlo_phase = 0.0\nomega = -2 * np.pi * F_offset / Fs   # software local oscillator step",
+        "detail": "GNURadioCode.sdrtesting",
+        "documentation": {}
+    },
+    {
+        "label": "alpha",
+        "kind": 5,
+        "importPath": "GNURadioCode.sdrtesting",
+        "description": "GNURadioCode.sdrtesting",
+        "peekOfCode": "alpha = np.exp(-1.0 / (Fs_demod * tau))\nb_de, a_de = [1 - alpha], [1, -alpha]\nzi_de = np.zeros(1)\n# State carried between blocks for glitch-free output\nprev_sample = 0.0 + 0.0j\nlo_phase = 0.0\nomega = -2 * np.pi * F_offset / Fs   # software local oscillator step\nstream = sd.OutputStream(samplerate=int(audio_rate), channels=1, dtype='float32')\nstream.start()\nprint(f\"Tuned to {F_station/1e6:.1f} MHz — Ctrl+C to stop.\")",
+        "detail": "GNURadioCode.sdrtesting",
+        "documentation": {}
+    },
+    {
+        "label": "zi_de",
+        "kind": 5,
+        "importPath": "GNURadioCode.sdrtesting",
+        "description": "GNURadioCode.sdrtesting",
+        "peekOfCode": "zi_de = np.zeros(1)\n# State carried between blocks for glitch-free output\nprev_sample = 0.0 + 0.0j\nlo_phase = 0.0\nomega = -2 * np.pi * F_offset / Fs   # software local oscillator step\nstream = sd.OutputStream(samplerate=int(audio_rate), channels=1, dtype='float32')\nstream.start()\nprint(f\"Tuned to {F_station/1e6:.1f} MHz — Ctrl+C to stop.\")\ntry:\n    while True:",
+        "detail": "GNURadioCode.sdrtesting",
+        "documentation": {}
+    },
+    {
+        "label": "prev_sample",
+        "kind": 5,
+        "importPath": "GNURadioCode.sdrtesting",
+        "description": "GNURadioCode.sdrtesting",
+        "peekOfCode": "prev_sample = 0.0 + 0.0j\nlo_phase = 0.0\nomega = -2 * np.pi * F_offset / Fs   # software local oscillator step\nstream = sd.OutputStream(samplerate=int(audio_rate), channels=1, dtype='float32')\nstream.start()\nprint(f\"Tuned to {F_station/1e6:.1f} MHz — Ctrl+C to stop.\")\ntry:\n    while True:\n        samples = sdr.read_samples(N)\n        # Mix the station down to baseband (phase kept continuous across blocks)",
+        "detail": "GNURadioCode.sdrtesting",
+        "documentation": {}
+    },
+    {
+        "label": "lo_phase",
+        "kind": 5,
+        "importPath": "GNURadioCode.sdrtesting",
+        "description": "GNURadioCode.sdrtesting",
+        "peekOfCode": "lo_phase = 0.0\nomega = -2 * np.pi * F_offset / Fs   # software local oscillator step\nstream = sd.OutputStream(samplerate=int(audio_rate), channels=1, dtype='float32')\nstream.start()\nprint(f\"Tuned to {F_station/1e6:.1f} MHz — Ctrl+C to stop.\")\ntry:\n    while True:\n        samples = sdr.read_samples(N)\n        # Mix the station down to baseband (phase kept continuous across blocks)\n        n = np.arange(len(samples))",
+        "detail": "GNURadioCode.sdrtesting",
+        "documentation": {}
+    },
+    {
+        "label": "omega",
+        "kind": 5,
+        "importPath": "GNURadioCode.sdrtesting",
+        "description": "GNURadioCode.sdrtesting",
+        "peekOfCode": "omega = -2 * np.pi * F_offset / Fs   # software local oscillator step\nstream = sd.OutputStream(samplerate=int(audio_rate), channels=1, dtype='float32')\nstream.start()\nprint(f\"Tuned to {F_station/1e6:.1f} MHz — Ctrl+C to stop.\")\ntry:\n    while True:\n        samples = sdr.read_samples(N)\n        # Mix the station down to baseband (phase kept continuous across blocks)\n        n = np.arange(len(samples))\n        lo = np.exp(1j * (lo_phase + omega * n))",
+        "detail": "GNURadioCode.sdrtesting",
+        "documentation": {}
+    },
+    {
+        "label": "stream",
+        "kind": 5,
+        "importPath": "GNURadioCode.sdrtesting",
+        "description": "GNURadioCode.sdrtesting",
+        "peekOfCode": "stream = sd.OutputStream(samplerate=int(audio_rate), channels=1, dtype='float32')\nstream.start()\nprint(f\"Tuned to {F_station/1e6:.1f} MHz — Ctrl+C to stop.\")\ntry:\n    while True:\n        samples = sdr.read_samples(N)\n        # Mix the station down to baseband (phase kept continuous across blocks)\n        n = np.arange(len(samples))\n        lo = np.exp(1j * (lo_phase + omega * n))\n        lo_phase = (lo_phase + omega * len(samples)) % (2 * np.pi)",
+        "detail": "GNURadioCode.sdrtesting",
+        "documentation": {}
+    },
+    {
+        "label": "rpm",
+        "kind": 5,
+        "importPath": "PythonCode.AccountForRotation",
+        "description": "PythonCode.AccountForRotation",
+        "peekOfCode": "rpm = float(input(\"What speed in RPM will this motor run? \"))\ntime_int = float(input(\"What time interval should corrections happen between (s)? \"))\n# Convert RPM → degrees\ndelta_angle = rpm * 6.0 * time_int\n# --- Motor setup ---\nmotor = MotorController(\n    motor_pin_forward=17,\n    motor_pin_backward=18,\n    encoder_a=22,\n    encoder_b=23,",
+        "detail": "PythonCode.AccountForRotation",
+        "documentation": {}
+    },
+    {
+        "label": "time_int",
+        "kind": 5,
+        "importPath": "PythonCode.AccountForRotation",
+        "description": "PythonCode.AccountForRotation",
+        "peekOfCode": "time_int = float(input(\"What time interval should corrections happen between (s)? \"))\n# Convert RPM → degrees\ndelta_angle = rpm * 6.0 * time_int\n# --- Motor setup ---\nmotor = MotorController(\n    motor_pin_forward=17,\n    motor_pin_backward=18,\n    encoder_a=22,\n    encoder_b=23,\n    counts_per_rev=200,",
+        "detail": "PythonCode.AccountForRotation",
+        "documentation": {}
+    },
+    {
+        "label": "delta_angle",
+        "kind": 5,
+        "importPath": "PythonCode.AccountForRotation",
+        "description": "PythonCode.AccountForRotation",
+        "peekOfCode": "delta_angle = rpm * 6.0 * time_int\n# --- Motor setup ---\nmotor = MotorController(\n    motor_pin_forward=17,\n    motor_pin_backward=18,\n    encoder_a=22,\n    encoder_b=23,\n    counts_per_rev=200,\n    kp=0.02,\n    kd=0.005",
+        "detail": "PythonCode.AccountForRotation",
+        "documentation": {}
+    },
+    {
+        "label": "motor",
+        "kind": 5,
+        "importPath": "PythonCode.AccountForRotation",
+        "description": "PythonCode.AccountForRotation",
+        "peekOfCode": "motor = MotorController(\n    motor_pin_forward=17,\n    motor_pin_backward=18,\n    encoder_a=22,\n    encoder_b=23,\n    counts_per_rev=200,\n    kp=0.02,\n    kd=0.005\n)\n# Set relative motion",
+        "detail": "PythonCode.AccountForRotation",
+        "documentation": {}
+    },
+    {
+        "label": "current_angle",
+        "kind": 5,
+        "importPath": "PythonCode.AccountForRotation",
+        "description": "PythonCode.AccountForRotation",
+        "peekOfCode": "current_angle = motor.get_current_angle()\nmotor.set_target_angle(current_angle + delta_angle)\n# --- Control loop ---\ntry:\n    while True:\n        error, control = motor.update()\n        if abs(error) < 0.5:  # 0.5 degree tolerance\n            break\n        time.sleep(time_int)\nfinally:",
+        "detail": "PythonCode.AccountForRotation",
+        "documentation": {}
+    },
+    {
+        "label": "forward",
+        "kind": 2,
+        "importPath": "PythonCode.DCMotorTest",
+        "description": "PythonCode.DCMotorTest",
+        "peekOfCode": "def forward(power):\n    GPIO.output(IN1, 1)\n    GPIO.output(IN2, 0)\n    pwm.ChangeDutyCycle(power)\ndef reverse(power):\n    GPIO.output(IN1, 0)\n    GPIO.output(IN2, 1)\n    pwm.ChangeDutyCycle(power)\ndef stop():\n    pwm.ChangeDutyCycle(0)",
+        "detail": "PythonCode.DCMotorTest",
+        "documentation": {}
+    },
+    {
+        "label": "reverse",
+        "kind": 2,
+        "importPath": "PythonCode.DCMotorTest",
+        "description": "PythonCode.DCMotorTest",
+        "peekOfCode": "def reverse(power):\n    GPIO.output(IN1, 0)\n    GPIO.output(IN2, 1)\n    pwm.ChangeDutyCycle(power)\ndef stop():\n    pwm.ChangeDutyCycle(0)\ntry:\n    print(\"Forward ramp\")\n    for power in range(0, 101, 10):\n        print(f\"Power: {power}%\")",
+        "detail": "PythonCode.DCMotorTest",
+        "documentation": {}
+    },
+    {
+        "label": "stop",
+        "kind": 2,
+        "importPath": "PythonCode.DCMotorTest",
+        "description": "PythonCode.DCMotorTest",
+        "peekOfCode": "def stop():\n    pwm.ChangeDutyCycle(0)\ntry:\n    print(\"Forward ramp\")\n    for power in range(0, 101, 10):\n        print(f\"Power: {power}%\")\n        forward(power)\n        time.sleep(1)\n    stop()\n    time.sleep(2)",
+        "detail": "PythonCode.DCMotorTest",
+        "documentation": {}
+    },
+    {
+        "label": "IN1",
+        "kind": 5,
+        "importPath": "PythonCode.DCMotorTest",
+        "description": "PythonCode.DCMotorTest",
+        "peekOfCode": "IN1 = 22\nIN2 = 23\nENA = 12  # PWM pin\nGPIO.setmode(GPIO.BCM)\nGPIO.setup(IN1, GPIO.OUT)\nGPIO.setup(IN2, GPIO.OUT)\nGPIO.setup(ENA, GPIO.OUT)\npwm = GPIO.PWM(ENA, 1000)  # 1 kHz PWM\npwm.start(0)\ndef forward(power):",
+        "detail": "PythonCode.DCMotorTest",
+        "documentation": {}
+    },
+    {
+        "label": "IN2",
+        "kind": 5,
+        "importPath": "PythonCode.DCMotorTest",
+        "description": "PythonCode.DCMotorTest",
+        "peekOfCode": "IN2 = 23\nENA = 12  # PWM pin\nGPIO.setmode(GPIO.BCM)\nGPIO.setup(IN1, GPIO.OUT)\nGPIO.setup(IN2, GPIO.OUT)\nGPIO.setup(ENA, GPIO.OUT)\npwm = GPIO.PWM(ENA, 1000)  # 1 kHz PWM\npwm.start(0)\ndef forward(power):\n    GPIO.output(IN1, 1)",
+        "detail": "PythonCode.DCMotorTest",
+        "documentation": {}
+    },
+    {
+        "label": "ENA",
+        "kind": 5,
+        "importPath": "PythonCode.DCMotorTest",
+        "description": "PythonCode.DCMotorTest",
+        "peekOfCode": "ENA = 12  # PWM pin\nGPIO.setmode(GPIO.BCM)\nGPIO.setup(IN1, GPIO.OUT)\nGPIO.setup(IN2, GPIO.OUT)\nGPIO.setup(ENA, GPIO.OUT)\npwm = GPIO.PWM(ENA, 1000)  # 1 kHz PWM\npwm.start(0)\ndef forward(power):\n    GPIO.output(IN1, 1)\n    GPIO.output(IN2, 0)",
+        "detail": "PythonCode.DCMotorTest",
+        "documentation": {}
+    },
+    {
+        "label": "pwm",
+        "kind": 5,
+        "importPath": "PythonCode.DCMotorTest",
+        "description": "PythonCode.DCMotorTest",
+        "peekOfCode": "pwm = GPIO.PWM(ENA, 1000)  # 1 kHz PWM\npwm.start(0)\ndef forward(power):\n    GPIO.output(IN1, 1)\n    GPIO.output(IN2, 0)\n    pwm.ChangeDutyCycle(power)\ndef reverse(power):\n    GPIO.output(IN1, 0)\n    GPIO.output(IN2, 1)\n    pwm.ChangeDutyCycle(power)",
+        "detail": "PythonCode.DCMotorTest",
+        "documentation": {}
+    },
+    {
+        "label": "TelescopeOperations",
+        "kind": 6,
+        "importPath": "PythonCode.FindTelescopeChangeNeeded",
+        "description": "PythonCode.FindTelescopeChangeNeeded",
+        "peekOfCode": "class TelescopeOperations:\n    def __init__(self, currLatitude, currLongitude, currElevation_km, desiredObject, currDateTime):\n        self.currLatitude = currLatitude\n        self.currLongitude = currLongitude\n        self.currElevation = currElevation_km\n        self.desiredObject = desiredObject\n        # Telescope state (mount coordinates)\n        self.currAlt = 90.0   # start pointing straight up\n        self.currAz = 0.0     # facing north\n        self.desiredAlt = 90.0",
+        "detail": "PythonCode.FindTelescopeChangeNeeded",
+        "documentation": {}
+    },
+    {
+        "label": "local_sidereal_time",
+        "kind": 2,
+        "importPath": "PythonCode.FindTelescopeChangeNeeded",
+        "description": "PythonCode.FindTelescopeChangeNeeded",
+        "peekOfCode": "def local_sidereal_time(jd, longitude_deg):\n    JD0 = 2451545.0\n    D = jd - JD0\n    GMST = 280.46061837 + 360.98564736629 * D\n    GMST = GMST % 360\n    LST = (GMST + longitude_deg) % 360\n    return LST\ndef hour_angle(lst_deg, ra_hours):\n    return (lst_deg - ra_hours * 15) % 360\ndef radec_to_altaz(ra_hours, dec_deg, lat_deg, lon_deg, dt):",
+        "detail": "PythonCode.FindTelescopeChangeNeeded",
+        "documentation": {}
+    },
+    {
+        "label": "hour_angle",
+        "kind": 2,
+        "importPath": "PythonCode.FindTelescopeChangeNeeded",
+        "description": "PythonCode.FindTelescopeChangeNeeded",
+        "peekOfCode": "def hour_angle(lst_deg, ra_hours):\n    return (lst_deg - ra_hours * 15) % 360\ndef radec_to_altaz(ra_hours, dec_deg, lat_deg, lon_deg, dt):\n    jd = Time(dt, scale='utc').jd\n    lst = local_sidereal_time(jd, lon_deg)\n    ha = hour_angle(lst, ra_hours)\n    ha = np.deg2rad(ha)\n    dec = np.deg2rad(dec_deg)\n    lat = np.deg2rad(lat_deg)\n    alt = np.arcsin(",
+        "detail": "PythonCode.FindTelescopeChangeNeeded",
+        "documentation": {}
+    },
+    {
+        "label": "radec_to_altaz",
+        "kind": 2,
+        "importPath": "PythonCode.FindTelescopeChangeNeeded",
+        "description": "PythonCode.FindTelescopeChangeNeeded",
+        "peekOfCode": "def radec_to_altaz(ra_hours, dec_deg, lat_deg, lon_deg, dt):\n    jd = Time(dt, scale='utc').jd\n    lst = local_sidereal_time(jd, lon_deg)\n    ha = hour_angle(lst, ra_hours)\n    ha = np.deg2rad(ha)\n    dec = np.deg2rad(dec_deg)\n    lat = np.deg2rad(lat_deg)\n    alt = np.arcsin(\n        np.sin(dec) * np.sin(lat) +\n        np.cos(dec) * np.cos(lat) * np.cos(ha)",
+        "detail": "PythonCode.FindTelescopeChangeNeeded",
+        "documentation": {}
+    },
+    {
+        "label": "currLongitude",
+        "kind": 5,
+        "importPath": "PythonCode.Main",
+        "description": "PythonCode.Main",
+        "peekOfCode": "currLongitude = float(input(\"Current Longitude (deg, +E): \"))\ncurrLatitude = float(input(\"Current Latitude (deg, +N): \"))\ncurrElevation = float(input(\"Current Elevation (km): \"))\ndesiredObject = input(\"Desired object ID (e.g. Moon, Mars, 399): \")\n# ---------- Initialize ----------\ncurrDateTime = datetime.now(timezone.utc)\ntelescope = TelescopeOperations(\n    currLatitude,\n    currLongitude,\n    currElevation,",
+        "detail": "PythonCode.Main",
+        "documentation": {}
+    },
+    {
+        "label": "currLatitude",
+        "kind": 5,
+        "importPath": "PythonCode.Main",
+        "description": "PythonCode.Main",
+        "peekOfCode": "currLatitude = float(input(\"Current Latitude (deg, +N): \"))\ncurrElevation = float(input(\"Current Elevation (km): \"))\ndesiredObject = input(\"Desired object ID (e.g. Moon, Mars, 399): \")\n# ---------- Initialize ----------\ncurrDateTime = datetime.now(timezone.utc)\ntelescope = TelescopeOperations(\n    currLatitude,\n    currLongitude,\n    currElevation,\n    desiredObject,",
+        "detail": "PythonCode.Main",
+        "documentation": {}
+    },
+    {
+        "label": "currElevation",
+        "kind": 5,
+        "importPath": "PythonCode.Main",
+        "description": "PythonCode.Main",
+        "peekOfCode": "currElevation = float(input(\"Current Elevation (km): \"))\ndesiredObject = input(\"Desired object ID (e.g. Moon, Mars, 399): \")\n# ---------- Initialize ----------\ncurrDateTime = datetime.now(timezone.utc)\ntelescope = TelescopeOperations(\n    currLatitude,\n    currLongitude,\n    currElevation,\n    desiredObject,\n    currDateTime",
+        "detail": "PythonCode.Main",
+        "documentation": {}
+    },
+    {
+        "label": "desiredObject",
+        "kind": 5,
+        "importPath": "PythonCode.Main",
+        "description": "PythonCode.Main",
+        "peekOfCode": "desiredObject = input(\"Desired object ID (e.g. Moon, Mars, 399): \")\n# ---------- Initialize ----------\ncurrDateTime = datetime.now(timezone.utc)\ntelescope = TelescopeOperations(\n    currLatitude,\n    currLongitude,\n    currElevation,\n    desiredObject,\n    currDateTime\n)",
+        "detail": "PythonCode.Main",
+        "documentation": {}
+    },
+    {
+        "label": "currDateTime",
+        "kind": 5,
+        "importPath": "PythonCode.Main",
+        "description": "PythonCode.Main",
+        "peekOfCode": "currDateTime = datetime.now(timezone.utc)\ntelescope = TelescopeOperations(\n    currLatitude,\n    currLongitude,\n    currElevation,\n    desiredObject,\n    currDateTime\n)\n# ---------- Tracking Loop ----------\nprint(\"\\nTracking started (Ctrl+C to stop)\\n\")",
+        "detail": "PythonCode.Main",
+        "documentation": {}
+    },
+    {
+        "label": "telescope",
+        "kind": 5,
+        "importPath": "PythonCode.Main",
+        "description": "PythonCode.Main",
+        "peekOfCode": "telescope = TelescopeOperations(\n    currLatitude,\n    currLongitude,\n    currElevation,\n    desiredObject,\n    currDateTime\n)\n# ---------- Tracking Loop ----------\nprint(\"\\nTracking started (Ctrl+C to stop)\\n\")\ntry:",
+        "detail": "PythonCode.Main",
+        "documentation": {}
+    },
+    {
+        "label": "PID",
+        "kind": 6,
+        "importPath": "PythonCode.MotorTools",
+        "description": "PythonCode.MotorTools",
+        "peekOfCode": "class PID:\n    def __init__(self, kp, ki, kd, output_limits=(-1.0, 1.0)):\n        self.kp = kp\n        self.ki = ki\n        self.kd = kd\n        self.min_out, self.max_out = output_limits\n        self.integral = 0.0\n        self.prev_error = None\n    def reset(self):\n        self.integral = 0.0",
+        "detail": "PythonCode.MotorTools",
+        "documentation": {}
+    },
+    {
+        "label": "MotorController",
+        "kind": 6,
+        "importPath": "PythonCode.MotorTools",
+        "description": "PythonCode.MotorTools",
+        "peekOfCode": "class MotorController:\n    def __init__(\n        self,\n        motor_pin_forward,\n        motor_pin_backward,\n        encoder_a,\n        encoder_b,\n        counts_per_rev,\n        kp=0.01,\n        ki=0.0,",
+        "detail": "PythonCode.MotorTools",
+        "documentation": {}
+    },
+    {
+        "label": "step_motor",
+        "kind": 2,
+        "importPath": "PythonCode.StepperMotorTest",
+        "description": "PythonCode.StepperMotorTest",
+        "peekOfCode": "def step_motor(steps, delay=0.05, clockwise=True):\n    seq_len = len(sequence)\n    for i in range(steps):\n        if clockwise:\n            step = sequence[i % seq_len]\n        else:\n            step = sequence[(seq_len - (i % seq_len)) % seq_len]  # reverse\n        for pin, val in zip(pins, step):\n            GPIO.output(pin, int(val))  # ensure integer\n        time.sleep(delay)",
+        "detail": "PythonCode.StepperMotorTest",
+        "documentation": {}
+    },
+    {
+        "label": "IN1",
+        "kind": 5,
+        "importPath": "PythonCode.StepperMotorTest",
+        "description": "PythonCode.StepperMotorTest",
+        "peekOfCode": "IN1 = 22  # Red\nIN2 = 23  # Blue\nIN3 = 27  # Black\nIN4 = 4   # Green\npins = [IN1, IN2, IN3, IN4]\n# Setup GPIO\nGPIO.setmode(GPIO.BCM)\nfor pin in pins:\n    GPIO.setup(pin, GPIO.OUT)\n    GPIO.output(pin, 0)  # turn off initially",
+        "detail": "PythonCode.StepperMotorTest",
+        "documentation": {}
+    },
+    {
+        "label": "IN2",
+        "kind": 5,
+        "importPath": "PythonCode.StepperMotorTest",
+        "description": "PythonCode.StepperMotorTest",
+        "peekOfCode": "IN2 = 23  # Blue\nIN3 = 27  # Black\nIN4 = 4   # Green\npins = [IN1, IN2, IN3, IN4]\n# Setup GPIO\nGPIO.setmode(GPIO.BCM)\nfor pin in pins:\n    GPIO.setup(pin, GPIO.OUT)\n    GPIO.output(pin, 0)  # turn off initially\n# Full-step sequence (4 steps)",
+        "detail": "PythonCode.StepperMotorTest",
+        "documentation": {}
+    },
+    {
+        "label": "IN3",
+        "kind": 5,
+        "importPath": "PythonCode.StepperMotorTest",
+        "description": "PythonCode.StepperMotorTest",
+        "peekOfCode": "IN3 = 27  # Black\nIN4 = 4   # Green\npins = [IN1, IN2, IN3, IN4]\n# Setup GPIO\nGPIO.setmode(GPIO.BCM)\nfor pin in pins:\n    GPIO.setup(pin, GPIO.OUT)\n    GPIO.output(pin, 0)  # turn off initially\n# Full-step sequence (4 steps)\nsequence = [",
+        "detail": "PythonCode.StepperMotorTest",
+        "documentation": {}
+    },
+    {
+        "label": "IN4",
+        "kind": 5,
+        "importPath": "PythonCode.StepperMotorTest",
+        "description": "PythonCode.StepperMotorTest",
+        "peekOfCode": "IN4 = 4   # Green\npins = [IN1, IN2, IN3, IN4]\n# Setup GPIO\nGPIO.setmode(GPIO.BCM)\nfor pin in pins:\n    GPIO.setup(pin, GPIO.OUT)\n    GPIO.output(pin, 0)  # turn off initially\n# Full-step sequence (4 steps)\nsequence = [\n    (1, 0, 1, 0),",
+        "detail": "PythonCode.StepperMotorTest",
+        "documentation": {}
+    },
+    {
+        "label": "pins",
+        "kind": 5,
+        "importPath": "PythonCode.StepperMotorTest",
+        "description": "PythonCode.StepperMotorTest",
+        "peekOfCode": "pins = [IN1, IN2, IN3, IN4]\n# Setup GPIO\nGPIO.setmode(GPIO.BCM)\nfor pin in pins:\n    GPIO.setup(pin, GPIO.OUT)\n    GPIO.output(pin, 0)  # turn off initially\n# Full-step sequence (4 steps)\nsequence = [\n    (1, 0, 1, 0),\n    (0, 1, 1, 0),",
+        "detail": "PythonCode.StepperMotorTest",
+        "documentation": {}
+    },
+    {
+        "label": "sequence",
+        "kind": 5,
+        "importPath": "PythonCode.StepperMotorTest",
+        "description": "PythonCode.StepperMotorTest",
+        "peekOfCode": "sequence = [\n    (1, 0, 1, 0),\n    (0, 1, 1, 0),\n    (0, 1, 0, 1),\n    (1, 0, 0, 1)\n]\n# Function to move motor\ndef step_motor(steps, delay=0.05, clockwise=True):\n    seq_len = len(sequence)\n    for i in range(steps):",
+        "detail": "PythonCode.StepperMotorTest",
+        "documentation": {}
+    }
+]
