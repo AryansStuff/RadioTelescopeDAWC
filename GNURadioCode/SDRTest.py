@@ -180,7 +180,7 @@ class SDRTest(gr.top_block, Qt.QWidget):
                 25000,
                 window.WIN_HAMMING,
                 6.76))
-        self.audio_sink_0 = audio.sink(32000, '', True)
+        self.audio_sink_0 = audio.sink(48000, 'plughw:0,0', True)
         self.analog_wfm_rcv_0 = analog.wfm_rcv(
         	quad_rate=256000,
         	audio_decimation=8,

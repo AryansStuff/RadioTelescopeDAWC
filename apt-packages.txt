@@ -1,0 +1,9 @@
+rtl-sdr
+librtlsdr-dev
+libportaudio2
+portaudio19-dev
+python3-pyqt5
+gnuradio
+soapysdr-tools
+soapysdr-module-rtlsdr
+python3-soapysdr
