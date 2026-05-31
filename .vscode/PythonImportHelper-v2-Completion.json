@@ -204,6 +204,31 @@
         "documentation": {}
     },
     {
+        "label": "uniform_filter1d",
+        "importPath": "scipy.ndimage",
+        "description": "scipy.ndimage",
+        "isExtraImport": true,
+        "detail": "scipy.ndimage",
+        "documentation": {}
+    },
+    {
+        "label": "matplotlib",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "matplotlib",
+        "description": "matplotlib",
+        "detail": "matplotlib",
+        "documentation": {}
+    },
+    {
+        "label": "gridspec",
+        "importPath": "matplotlib",
+        "description": "matplotlib",
+        "isExtraImport": true,
+        "detail": "matplotlib",
+        "documentation": {}
+    },
+    {
         "label": "StrictVersion",
         "importPath": "distutils.version",
         "description": "distutils.version",
@@ -500,7 +525,25 @@
         "kind": 2,
         "importPath": "GNURadioCode.runthis",
         "description": "GNURadioCode.runthis",
-        "peekOfCode": "def load_spectrum(path, fft_size, mode='last'):\n    \"\"\"Return one 8192-bin spectrum: the IIR-converged last frame, or the\n    mean of every saved frame.\"\"\"\n    data = np.fromfile(path, dtype=np.float32)\n    n = data.size // fft_size\n    if n == 0:\n        raise SystemExit(f\"{path}: file too short / wrong fft-size.\")\n    frames = data[:n * fft_size].reshape(n, fft_size)\n    return frames[-1] if mode == 'last' else frames.mean(axis=0)\ndef refine_peak(spec, k):",
+        "peekOfCode": "def load_spectrum(path, fft_size, mode='last'):\n    data = np.fromfile(path, dtype=np.float32)\n    n = data.size // fft_size\n    if n == 0:\n        raise SystemExit(f\"{path}: file too short / wrong fft-size.\")\n    frames = data[:n * fft_size].reshape(n, fft_size)\n    return frames[-1] if mode == 'last' else frames.mean(axis=0)\ndef snr_db_to_height(snr_db, sigma):\n    return max(snr_db, 4.0 * sigma)\ndef detect_reference_peaks(spec, prominence, snr_db, top_n):",
+        "detail": "GNURadioCode.runthis",
+        "documentation": {}
+    },
+    {
+        "label": "snr_db_to_height",
+        "kind": 2,
+        "importPath": "GNURadioCode.runthis",
+        "description": "GNURadioCode.runthis",
+        "peekOfCode": "def snr_db_to_height(snr_db, sigma):\n    return max(snr_db, 4.0 * sigma)\ndef detect_reference_peaks(spec, prominence, snr_db, top_n):\n    \"\"\"Detect only genuine RFI peaks well above the noise floor.\"\"\"\n    med = np.median(spec)\n    mad = np.median(np.abs(spec - med)) + 1e-9\n    sigma = 1.4826 * mad\n    height = med + snr_db_to_height(snr_db, sigma)\n    peaks, _ = find_peaks(spec, prominence=prominence, height=height)\n    if peaks.size == 0:",
+        "detail": "GNURadioCode.runthis",
+        "documentation": {}
+    },
+    {
+        "label": "detect_reference_peaks",
+        "kind": 2,
+        "importPath": "GNURadioCode.runthis",
+        "description": "GNURadioCode.runthis",
+        "peekOfCode": "def detect_reference_peaks(spec, prominence, snr_db, top_n):\n    \"\"\"Detect only genuine RFI peaks well above the noise floor.\"\"\"\n    med = np.median(spec)\n    mad = np.median(np.abs(spec - med)) + 1e-9\n    sigma = 1.4826 * mad\n    height = med + snr_db_to_height(snr_db, sigma)\n    peaks, _ = find_peaks(spec, prominence=prominence, height=height)\n    if peaks.size == 0:\n        peaks, _ = find_peaks(spec, prominence=prominence, height=med + 3 * sigma)\n    if peaks.size == 0:",
         "detail": "GNURadioCode.runthis",
         "documentation": {}
     },
@@ -509,7 +552,25 @@
         "kind": 2,
         "importPath": "GNURadioCode.runthis",
         "description": "GNURadioCode.runthis",
-        "peekOfCode": "def refine_peak(spec, k):\n    \"\"\"3-point parabolic interpolation -> fractional bin index.\"\"\"\n    if k <= 0 or k >= len(spec) - 1:\n        return float(k)\n    a, b, c = spec[k - 1], spec[k], spec[k + 1]\n    denom = a - 2.0 * b + c\n    if denom == 0:\n        return float(k)\n    return k + 0.5 * (a - c) / denom\ndef main():",
+        "peekOfCode": "def refine_peak(spec, k):\n    \"\"\"3-point parabolic interpolation -> fractional bin index (sub-bin).\"\"\"\n    if k <= 0 or k >= len(spec) - 1:\n        return float(k)\n    a, b, c = spec[k - 1], spec[k], spec[k + 1]\n    denom = a - 2.0 * b + c\n    if denom == 0:\n        return float(k)\n    return k + 0.5 * (a - c) / denom\ndef rms_width_var(spec_db, center_bin, half_win, floor_db):",
+        "detail": "GNURadioCode.runthis",
+        "documentation": {}
+    },
+    {
+        "label": "rms_width_var",
+        "kind": 2,
+        "importPath": "GNURadioCode.runthis",
+        "description": "GNURadioCode.runthis",
+        "peekOfCode": "def rms_width_var(spec_db, center_bin, half_win, floor_db):\n    \"\"\"Intensity-weighted variance (bins^2) of a peak, on linear power with the\n    noise floor subtracted.\"\"\"\n    lo = max(0, center_bin - half_win)\n    hi = min(len(spec_db), center_bin + half_win + 1)\n    idx = np.arange(lo, hi)\n    p = 10.0 ** (spec_db[lo:hi] / 10.0) - 10.0 ** (floor_db / 10.0)\n    p = np.clip(p, 0.0, None)\n    tot = p.sum()\n    if tot <= 0:",
+        "detail": "GNURadioCode.runthis",
+        "documentation": {}
+    },
+    {
+        "label": "make_plot",
+        "kind": 2,
+        "importPath": "GNURadioCode.runthis",
+        "description": "GNURadioCode.runthis",
+        "peekOfCode": "def make_plot(stat, rot, records, bw, center_freq, fft_size, summary,\n              outpath, n_panels):\n    \"\"\"Overview of the whole spectrum + zoomed before/after panels.\"\"\"\n    plt.rcParams.update({\"font.size\": 10, \"axes.titlesize\": 10,\n                         \"axes.spines.top\": False, \"axes.spines.right\": False})\n    c_stat, c_rot = \"#2c6fbb\", \"#e8743b\"\n    n = len(stat)\n    f_mhz = (center_freq + (np.arange(n) - fft_size / 2) * bw) / 1e6\n    recs = sorted(records, key=lambda r: r['power'], reverse=True)[:n_panels]\n    recs = sorted(recs, key=lambda r: r['sp'])",
         "detail": "GNURadioCode.runthis",
         "documentation": {}
     },
@@ -518,7 +579,7 @@
         "kind": 2,
         "importPath": "GNURadioCode.runthis",
         "description": "GNURadioCode.runthis",
-        "peekOfCode": "def main():\n    p = argparse.ArgumentParser(description=\"Average RFI peak shift across all peaks.\")\n    p.add_argument('stationary', help='stationary recording (e.g. stationary.dat)')\n    p.add_argument('rotating', help='rotating recording (e.g. rotating.dat)')\n    p.add_argument('--fft-size', type=int, default=8192)\n    p.add_argument('--samp-rate', type=float, default=2.4e6)\n    p.add_argument('--center-freq', type=float, default=1.42041e9)\n    p.add_argument('--prominence', type=float, default=3.0,\n                   help='min peak prominence (dB) for a bin to count as a peak')\n    p.add_argument('--max-shift', type=float, default=2000.0,",
+        "peekOfCode": "def main():\n    p = argparse.ArgumentParser(description=\"RFI peak shift + broadening, with plot.\")\n    p.add_argument('stationary')\n    p.add_argument('rotating')\n    p.add_argument('--fft-size', type=int, default=8192)\n    p.add_argument('--samp-rate', type=float, default=2.4e6)\n    p.add_argument('--center-freq', type=float, default=1.42041e9)\n    p.add_argument('--prominence', type=float, default=6.0)\n    p.add_argument('--snr', type=float, default=8.0)\n    p.add_argument('--top-n', type=int, default=40)",
         "detail": "GNURadioCode.runthis",
         "documentation": {}
     },
@@ -545,7 +606,7 @@
         "kind": 5,
         "importPath": "GNURadioCode.sdrtesting",
         "description": "GNURadioCode.sdrtesting",
-        "peekOfCode": "F_station = 96.7e6      # KISS FM\nF_offset  = 250000      # offset-tune away from DC spike, mix back in software\nFs        = 1.2e6       # SDR sample rate\nN         = 128000      # samples per block (multiple of 512, divisible by 25)\ndec1      = 5           # 1.2 MHz -> 240 kHz\ndec2      = 5           # 240 kHz -> 48 kHz audio\nGAIN      = 'auto'      # or a number like 40\nVOLUME    = 0.3\n# --------------------------\nFs_demod   = Fs / dec1          # 240000",
+        "peekOfCode": "F_station = 96.7e6      # KISS FM\nF_offset  = 250000      # offset-tune away from DC spike, mix back in software\nFs        = 1.2e6       # SDR sample rate\nN         = 128000      # samples per block (multiple of 512, divisible by 25)\ndec1      = 5           # 1.2 MHz -> 240 kHz\ndec2      = 5           # 240 kHz -> 48 kHz audio\nGAIN      = 'auto'      # or a number like 40\nVOLUME    = 0.3\n# --------------------------\nFs_demod   = Fs / dec1          # 240000  ",
         "detail": "GNURadioCode.sdrtesting",
         "documentation": {}
     },

@@ -14,7 +14,7 @@ GAIN      = 'auto'      # or a number like 40
 VOLUME    = 0.3
 # --------------------------
 
-Fs_demod   = Fs / dec1          # 240000
+Fs_demod   = Fs / dec1          # 240000  
 audio_rate = Fs_demod / dec2    # 48000
 
 # Setup SDR
