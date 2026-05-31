@@ -926,65 +926,20 @@
         "documentation": {}
     },
     {
-        "label": "step_motor",
-        "kind": 2,
+        "label": "PUL",
+        "kind": 5,
         "importPath": "PythonCode.StepperMotorTest",
         "description": "PythonCode.StepperMotorTest",
-        "peekOfCode": "def step_motor(steps, delay=0.05, clockwise=True):\n    seq_len = len(sequence)\n    for i in range(steps):\n        if clockwise:\n            step = sequence[i % seq_len]\n        else:\n            step = sequence[(seq_len - (i % seq_len)) % seq_len]  # reverse\n        for pin, val in zip(pins, step):\n            GPIO.output(pin, int(val))  # ensure integer\n        time.sleep(delay)",
+        "peekOfCode": "PUL = 17   # wired to PUL-\nDIR = 27   # wired to DIR-\nGPIO.setmode(GPIO.BCM)\nGPIO.setup(PUL, GPIO.OUT)\nGPIO.setup(DIR, GPIO.OUT)\nGPIO.output(DIR, GPIO.HIGH)   # direction; flip to LOW to reverse\nwhile True:                   # spin continuously\n    GPIO.output(PUL, GPIO.HIGH)\n    time.sleep(0.0005)        # smaller delay = faster\n    GPIO.output(PUL, GPIO.LOW)",
         "detail": "PythonCode.StepperMotorTest",
         "documentation": {}
     },
     {
-        "label": "IN1",
+        "label": "DIR",
         "kind": 5,
         "importPath": "PythonCode.StepperMotorTest",
         "description": "PythonCode.StepperMotorTest",
-        "peekOfCode": "IN1 = 22  # Red\nIN2 = 23  # Blue\nIN3 = 27  # Black\nIN4 = 4   # Green\npins = [IN1, IN2, IN3, IN4]\n# Setup GPIO\nGPIO.setmode(GPIO.BCM)\nfor pin in pins:\n    GPIO.setup(pin, GPIO.OUT)\n    GPIO.output(pin, 0)  # turn off initially",
-        "detail": "PythonCode.StepperMotorTest",
-        "documentation": {}
-    },
-    {
-        "label": "IN2",
-        "kind": 5,
-        "importPath": "PythonCode.StepperMotorTest",
-        "description": "PythonCode.StepperMotorTest",
-        "peekOfCode": "IN2 = 23  # Blue\nIN3 = 27  # Black\nIN4 = 4   # Green\npins = [IN1, IN2, IN3, IN4]\n# Setup GPIO\nGPIO.setmode(GPIO.BCM)\nfor pin in pins:\n    GPIO.setup(pin, GPIO.OUT)\n    GPIO.output(pin, 0)  # turn off initially\n# Full-step sequence (4 steps)",
-        "detail": "PythonCode.StepperMotorTest",
-        "documentation": {}
-    },
-    {
-        "label": "IN3",
-        "kind": 5,
-        "importPath": "PythonCode.StepperMotorTest",
-        "description": "PythonCode.StepperMotorTest",
-        "peekOfCode": "IN3 = 27  # Black\nIN4 = 4   # Green\npins = [IN1, IN2, IN3, IN4]\n# Setup GPIO\nGPIO.setmode(GPIO.BCM)\nfor pin in pins:\n    GPIO.setup(pin, GPIO.OUT)\n    GPIO.output(pin, 0)  # turn off initially\n# Full-step sequence (4 steps)\nsequence = [",
-        "detail": "PythonCode.StepperMotorTest",
-        "documentation": {}
-    },
-    {
-        "label": "IN4",
-        "kind": 5,
-        "importPath": "PythonCode.StepperMotorTest",
-        "description": "PythonCode.StepperMotorTest",
-        "peekOfCode": "IN4 = 4   # Green\npins = [IN1, IN2, IN3, IN4]\n# Setup GPIO\nGPIO.setmode(GPIO.BCM)\nfor pin in pins:\n    GPIO.setup(pin, GPIO.OUT)\n    GPIO.output(pin, 0)  # turn off initially\n# Full-step sequence (4 steps)\nsequence = [\n    (1, 0, 1, 0),",
-        "detail": "PythonCode.StepperMotorTest",
-        "documentation": {}
-    },
-    {
-        "label": "pins",
-        "kind": 5,
-        "importPath": "PythonCode.StepperMotorTest",
-        "description": "PythonCode.StepperMotorTest",
-        "peekOfCode": "pins = [IN1, IN2, IN3, IN4]\n# Setup GPIO\nGPIO.setmode(GPIO.BCM)\nfor pin in pins:\n    GPIO.setup(pin, GPIO.OUT)\n    GPIO.output(pin, 0)  # turn off initially\n# Full-step sequence (4 steps)\nsequence = [\n    (1, 0, 1, 0),\n    (0, 1, 1, 0),",
-        "detail": "PythonCode.StepperMotorTest",
-        "documentation": {}
-    },
-    {
-        "label": "sequence",
-        "kind": 5,
-        "importPath": "PythonCode.StepperMotorTest",
-        "description": "PythonCode.StepperMotorTest",
-        "peekOfCode": "sequence = [\n    (1, 0, 1, 0),\n    (0, 1, 1, 0),\n    (0, 1, 0, 1),\n    (1, 0, 0, 1)\n]\n# Function to move motor\ndef step_motor(steps, delay=0.05, clockwise=True):\n    seq_len = len(sequence)\n    for i in range(steps):",
+        "peekOfCode": "DIR = 27   # wired to DIR-\nGPIO.setmode(GPIO.BCM)\nGPIO.setup(PUL, GPIO.OUT)\nGPIO.setup(DIR, GPIO.OUT)\nGPIO.output(DIR, GPIO.HIGH)   # direction; flip to LOW to reverse\nwhile True:                   # spin continuously\n    GPIO.output(PUL, GPIO.HIGH)\n    time.sleep(0.0005)        # smaller delay = faster\n    GPIO.output(PUL, GPIO.LOW)\n    time.sleep(0.0005)",
         "detail": "PythonCode.StepperMotorTest",
         "documentation": {}
     }
