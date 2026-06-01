@@ -755,6 +755,33 @@
         "documentation": {}
     },
     {
+        "label": "IN1",
+        "kind": 5,
+        "importPath": "PythonCode.DCMotorRun",
+        "description": "PythonCode.DCMotorRun",
+        "peekOfCode": "IN1 = 22   # direction A\nIN2 = 23   # direction B\nENA = 12   # enable / speed pin\nGPIO.setwarnings(False)\nGPIO.setmode(GPIO.BCM)\nfor p in (IN1, IN2, ENA):\n    GPIO.setup(p, GPIO.OUT)\n# Set direction (one way)\nGPIO.output(IN1, GPIO.HIGH)\nGPIO.output(IN2, GPIO.LOW)",
+        "detail": "PythonCode.DCMotorRun",
+        "documentation": {}
+    },
+    {
+        "label": "IN2",
+        "kind": 5,
+        "importPath": "PythonCode.DCMotorRun",
+        "description": "PythonCode.DCMotorRun",
+        "peekOfCode": "IN2 = 23   # direction B\nENA = 12   # enable / speed pin\nGPIO.setwarnings(False)\nGPIO.setmode(GPIO.BCM)\nfor p in (IN1, IN2, ENA):\n    GPIO.setup(p, GPIO.OUT)\n# Set direction (one way)\nGPIO.output(IN1, GPIO.HIGH)\nGPIO.output(IN2, GPIO.LOW)\n# Full power: ENA HIGH = 100% (no PWM needed)",
+        "detail": "PythonCode.DCMotorRun",
+        "documentation": {}
+    },
+    {
+        "label": "ENA",
+        "kind": 5,
+        "importPath": "PythonCode.DCMotorRun",
+        "description": "PythonCode.DCMotorRun",
+        "peekOfCode": "ENA = 12   # enable / speed pin\nGPIO.setwarnings(False)\nGPIO.setmode(GPIO.BCM)\nfor p in (IN1, IN2, ENA):\n    GPIO.setup(p, GPIO.OUT)\n# Set direction (one way)\nGPIO.output(IN1, GPIO.HIGH)\nGPIO.output(IN2, GPIO.LOW)\n# Full power: ENA HIGH = 100% (no PWM needed)\nGPIO.output(ENA, GPIO.HIGH)",
+        "detail": "PythonCode.DCMotorRun",
+        "documentation": {}
+    },
+    {
         "label": "forward",
         "kind": 2,
         "importPath": "PythonCode.DCMotorTest",
