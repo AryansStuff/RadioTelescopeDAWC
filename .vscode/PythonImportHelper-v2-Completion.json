@@ -928,6 +928,33 @@
     {
         "label": "PUL",
         "kind": 5,
+        "importPath": "PythonCode.RunSteppers",
+        "description": "PythonCode.RunSteppers",
+        "peekOfCode": "PUL = 17\nDIR = 27\nDELAY = 0.003\nGPIO.setwarnings(False)\nGPIO.setmode(GPIO.BCM)\nGPIO.setup(PUL, GPIO.OUT)\nGPIO.setup(DIR, GPIO.OUT)\nGPIO.output(DIR, GPIO.HIGH)\ntime.sleep(0.1)\nprint(\"Spinning\")",
+        "detail": "PythonCode.RunSteppers",
+        "documentation": {}
+    },
+    {
+        "label": "DIR",
+        "kind": 5,
+        "importPath": "PythonCode.RunSteppers",
+        "description": "PythonCode.RunSteppers",
+        "peekOfCode": "DIR = 27\nDELAY = 0.003\nGPIO.setwarnings(False)\nGPIO.setmode(GPIO.BCM)\nGPIO.setup(PUL, GPIO.OUT)\nGPIO.setup(DIR, GPIO.OUT)\nGPIO.output(DIR, GPIO.HIGH)\ntime.sleep(0.1)\nprint(\"Spinning\")\ntry:",
+        "detail": "PythonCode.RunSteppers",
+        "documentation": {}
+    },
+    {
+        "label": "DELAY",
+        "kind": 5,
+        "importPath": "PythonCode.RunSteppers",
+        "description": "PythonCode.RunSteppers",
+        "peekOfCode": "DELAY = 0.003\nGPIO.setwarnings(False)\nGPIO.setmode(GPIO.BCM)\nGPIO.setup(PUL, GPIO.OUT)\nGPIO.setup(DIR, GPIO.OUT)\nGPIO.output(DIR, GPIO.HIGH)\ntime.sleep(0.1)\nprint(\"Spinning\")\ntry:\n    while True:",
+        "detail": "PythonCode.RunSteppers",
+        "documentation": {}
+    },
+    {
+        "label": "PUL",
+        "kind": 5,
         "importPath": "PythonCode.StepperMotorTest",
         "description": "PythonCode.StepperMotorTest",
         "peekOfCode": "PUL = 17\nGPIO.setwarnings(False)\nGPIO.setmode(GPIO.BCM)\nGPIO.setup(PUL, GPIO.OUT)\nprint(\"Slow PUL toggle\")\ntry:\n    state = False\n    while True:\n        state = not state\n        GPIO.output(PUL, state)",
