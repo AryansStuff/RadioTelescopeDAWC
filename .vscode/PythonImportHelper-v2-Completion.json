@@ -930,7 +930,7 @@
         "kind": 5,
         "importPath": "PythonCode.StepperMotorTest",
         "description": "PythonCode.StepperMotorTest",
-        "peekOfCode": "PUL = 17   # wired to PUL-\nDIR = 27   # wired to DIR-\nGPIO.setmode(GPIO.BCM)\nGPIO.setup(PUL, GPIO.OUT)\nGPIO.setup(DIR, GPIO.OUT)\nGPIO.output(DIR, GPIO.HIGH)   # direction; flip to LOW to reverse\nwhile True:                   # spin continuously\n    GPIO.output(PUL, GPIO.HIGH)\n    time.sleep(0.0005)        # smaller delay = faster\n    GPIO.output(PUL, GPIO.LOW)",
+        "peekOfCode": "PUL = 17    # wired to PUL- on the driver\nDIR = 27    # wired to DIR- on the driver\n# --- Test settings ---\nSTEPS = 200        # at full-step, 200 steps = one full revolution\nSTEP_DELAY = 0.05  # seconds per edge; raise this to slow it down further\nGPIO.setwarnings(False)\nGPIO.setmode(GPIO.BCM)\nGPIO.setup(PUL, GPIO.OUT)\nGPIO.setup(DIR, GPIO.OUT)\nGPIO.output(DIR, GPIO.HIGH)   # direction; flip to LOW to reverse",
         "detail": "PythonCode.StepperMotorTest",
         "documentation": {}
     },
@@ -939,7 +939,25 @@
         "kind": 5,
         "importPath": "PythonCode.StepperMotorTest",
         "description": "PythonCode.StepperMotorTest",
-        "peekOfCode": "DIR = 27   # wired to DIR-\nGPIO.setmode(GPIO.BCM)\nGPIO.setup(PUL, GPIO.OUT)\nGPIO.setup(DIR, GPIO.OUT)\nGPIO.output(DIR, GPIO.HIGH)   # direction; flip to LOW to reverse\nwhile True:                   # spin continuously\n    GPIO.output(PUL, GPIO.HIGH)\n    time.sleep(0.0005)        # smaller delay = faster\n    GPIO.output(PUL, GPIO.LOW)\n    time.sleep(0.0005)",
+        "peekOfCode": "DIR = 27    # wired to DIR- on the driver\n# --- Test settings ---\nSTEPS = 200        # at full-step, 200 steps = one full revolution\nSTEP_DELAY = 0.05  # seconds per edge; raise this to slow it down further\nGPIO.setwarnings(False)\nGPIO.setmode(GPIO.BCM)\nGPIO.setup(PUL, GPIO.OUT)\nGPIO.setup(DIR, GPIO.OUT)\nGPIO.output(DIR, GPIO.HIGH)   # direction; flip to LOW to reverse\ntime.sleep(0.1)",
+        "detail": "PythonCode.StepperMotorTest",
+        "documentation": {}
+    },
+    {
+        "label": "STEPS",
+        "kind": 5,
+        "importPath": "PythonCode.StepperMotorTest",
+        "description": "PythonCode.StepperMotorTest",
+        "peekOfCode": "STEPS = 200        # at full-step, 200 steps = one full revolution\nSTEP_DELAY = 0.05  # seconds per edge; raise this to slow it down further\nGPIO.setwarnings(False)\nGPIO.setmode(GPIO.BCM)\nGPIO.setup(PUL, GPIO.OUT)\nGPIO.setup(DIR, GPIO.OUT)\nGPIO.output(DIR, GPIO.HIGH)   # direction; flip to LOW to reverse\ntime.sleep(0.1)\ntry:\n    print(\"Stepping... watch the shaft for a tick on each step.\")",
+        "detail": "PythonCode.StepperMotorTest",
+        "documentation": {}
+    },
+    {
+        "label": "STEP_DELAY",
+        "kind": 5,
+        "importPath": "PythonCode.StepperMotorTest",
+        "description": "PythonCode.StepperMotorTest",
+        "peekOfCode": "STEP_DELAY = 0.05  # seconds per edge; raise this to slow it down further\nGPIO.setwarnings(False)\nGPIO.setmode(GPIO.BCM)\nGPIO.setup(PUL, GPIO.OUT)\nGPIO.setup(DIR, GPIO.OUT)\nGPIO.output(DIR, GPIO.HIGH)   # direction; flip to LOW to reverse\ntime.sleep(0.1)\ntry:\n    print(\"Stepping... watch the shaft for a tick on each step.\")\n    for i in range(STEPS):",
         "detail": "PythonCode.StepperMotorTest",
         "documentation": {}
     }
