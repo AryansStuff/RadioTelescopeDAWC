@@ -1,32 +1,24 @@
 import RPi.GPIO as GPIO
 import time
 
-# --- Pins (BCM numbering, matching the 17 & 27 from `pinout`) ---
-PUL = 17    # wired to PUL- on the driver
-DIR = 27    # wired to DIR- on the driver
-
-# --- Test settings ---
-STEPS = 200        # at full-step, 200 steps = one full revolution
-STEP_DELAY = 0.05  # seconds per edge; raise this to slow it down further
+PUL = 17
 
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(PUL, GPIO.OUT)
-GPIO.setup(DIR, GPIO.OUT)
 
-GPIO.output(DIR, GPIO.HIGH)   # direction; flip to LOW to reverse
-time.sleep(0.1)
+print("Slow PUL toggle")
 
 try:
-    print("Stepping... watch the shaft for a tick on each step.")
-    for i in range(STEPS):
-        GPIO.output(PUL, GPIO.HIGH)
-        time.sleep(STEP_DELAY)
-        GPIO.output(PUL, GPIO.LOW)
-        time.sleep(STEP_DELAY)
-        print(f"step {i + 1}/{STEPS}")
-    print("Done.")
+    state = False
+    while True:
+        state = not state
+        GPIO.output(PUL, state)
+        if state:
+            print("PUL HIGH  ->  PUL- should read ~3.3 V")
+        else:
+            print("PUL LOW   ->  PUL- should read ~0 V")
+        time.sleep(1.5)
 except KeyboardInterrupt:
-    print("Stopped.")
-finally:
-    GPIO.cleanup()   # releases the pins so the hold/hum stops
+    GPIO.cleanup()
+    print("\nStopped, pin released.")
