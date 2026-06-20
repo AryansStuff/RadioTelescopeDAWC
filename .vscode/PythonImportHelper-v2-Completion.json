@@ -1,22 +1,5 @@
 [
     {
-        "label": "time",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "time",
-        "description": "time",
-        "detail": "time",
-        "documentation": {}
-    },
-    {
-        "label": "sleep",
-        "importPath": "time",
-        "description": "time",
-        "isExtraImport": true,
-        "detail": "time",
-        "documentation": {}
-    },
-    {
         "label": "argparse",
         "kind": 6,
         "isExtraImport": true,
@@ -31,6 +14,67 @@
         "description": "argparse",
         "isExtraImport": true,
         "detail": "argparse",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "matplotlib",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "matplotlib",
+        "description": "matplotlib",
+        "detail": "matplotlib",
+        "documentation": {}
+    },
+    {
+        "label": "gridspec",
+        "importPath": "matplotlib",
+        "description": "matplotlib",
+        "isExtraImport": true,
+        "detail": "matplotlib",
+        "documentation": {}
+    },
+    {
+        "label": "matplotlib.pyplot",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "matplotlib.pyplot",
+        "description": "matplotlib.pyplot",
+        "detail": "matplotlib.pyplot",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "sleep",
+        "importPath": "time",
+        "description": "time",
+        "isExtraImport": true,
+        "detail": "time",
         "documentation": {}
     },
     {
@@ -170,24 +214,6 @@
         "documentation": {}
     },
     {
-        "label": "numpy",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "numpy",
-        "description": "numpy",
-        "detail": "numpy",
-        "documentation": {}
-    },
-    {
-        "label": "matplotlib.pyplot",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "matplotlib.pyplot",
-        "description": "matplotlib.pyplot",
-        "detail": "matplotlib.pyplot",
-        "documentation": {}
-    },
-    {
         "label": "FuncAnimation",
         "importPath": "matplotlib.animation",
         "description": "matplotlib.animation",
@@ -209,23 +235,6 @@
         "description": "scipy.ndimage",
         "isExtraImport": true,
         "detail": "scipy.ndimage",
-        "documentation": {}
-    },
-    {
-        "label": "matplotlib",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "matplotlib",
-        "description": "matplotlib",
-        "detail": "matplotlib",
-        "documentation": {}
-    },
-    {
-        "label": "gridspec",
-        "importPath": "matplotlib",
-        "description": "matplotlib",
-        "isExtraImport": true,
-        "detail": "matplotlib",
         "documentation": {}
     },
     {
@@ -259,15 +268,6 @@
         "importPath": "sip",
         "description": "sip",
         "detail": "sip",
-        "documentation": {}
-    },
-    {
-        "label": "sys",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "sys",
-        "description": "sys",
-        "detail": "sys",
         "documentation": {}
     },
     {
@@ -383,6 +383,105 @@
         "description": "gpiozero",
         "isExtraImport": true,
         "detail": "gpiozero",
+        "documentation": {}
+    },
+    {
+        "label": "load_iq",
+        "kind": 2,
+        "importPath": "GNURadioCode.dopplerwaterfall",
+        "description": "GNURadioCode.dopplerwaterfall",
+        "peekOfCode": "def load_iq(path, fmt, rate, max_seconds):\n    \"\"\"Load complex IQ samples, capped at max_seconds to bound memory.\"\"\"\n    max_samp = int(max_seconds * rate) if max_seconds else None\n    if fmt == \"cf32\":  # GNU Radio gr_complex = interleaved float32\n        data = np.fromfile(path, dtype=np.complex64, count=(max_samp or -1))\n        x = data\n    elif fmt == \"u8\":  # rtl_sdr raw: interleaved unsigned bytes, 127.5-centered\n        raw = np.fromfile(path, dtype=np.uint8,\n                          count=(2 * max_samp if max_samp else -1))\n        raw = raw[: 2 * (len(raw) // 2)]",
+        "detail": "GNURadioCode.dopplerwaterfall",
+        "documentation": {}
+    },
+    {
+        "label": "find_peak_offset",
+        "kind": 2,
+        "importPath": "GNURadioCode.dopplerwaterfall",
+        "description": "GNURadioCode.dopplerwaterfall",
+        "peekOfCode": "def find_peak_offset(x, rate, nfft=8192, dc_guard_hz=3000.0):\n    \"\"\"Average power spectrum; return the offset (Hz) of the strongest peak,\n    ignoring a small guard band around DC (the RTL-SDR's center spike).\"\"\"\n    f, pxx = signal.welch(x, fs=rate, nperseg=min(nfft, x.size),\n                          return_onesided=False, scaling=\"density\")\n    f = np.fft.fftshift(f)\n    pxx = np.fft.fftshift(pxx)\n    mask = np.abs(f) > dc_guard_hz\n    idx = np.argmax(pxx[mask])\n    return float(f[mask][idx])",
+        "detail": "GNURadioCode.dopplerwaterfall",
+        "documentation": {}
+    },
+    {
+        "label": "channelize",
+        "kind": 2,
+        "importPath": "GNURadioCode.dopplerwaterfall",
+        "description": "GNURadioCode.dopplerwaterfall",
+        "peekOfCode": "def channelize(x, rate, peak_offset, target_rate):\n    \"\"\"Mix the peak to 0 Hz and decimate to ~target_rate so the spectrogram is\n    small and high-resolution. Returns (baseband_signal, new_rate).\"\"\"\n    n = np.arange(x.size, dtype=np.float64)\n    x0 = x * np.exp(-2j * np.pi * peak_offset * n / rate).astype(np.complex64)\n    decim = max(1, int(round(rate / target_rate)))\n    if decim > 1:\n        for q in _factorize(decim):\n            if q > 1:\n                x0 = signal.decimate(x0, q, ftype=\"fir\", zero_phase=True)",
+        "detail": "GNURadioCode.dopplerwaterfall",
+        "documentation": {}
+    },
+    {
+        "label": "spectrogram_and_track",
+        "kind": 2,
+        "importPath": "GNURadioCode.dopplerwaterfall",
+        "description": "GNURadioCode.dopplerwaterfall",
+        "peekOfCode": "def spectrogram_and_track(xc, rate, slice_sec, search_hz):\n    \"\"\"Build the spectrogram and track the peak (near 0 Hz) in each time slice.\"\"\"\n    nper = max(16, int(slice_sec * rate))\n    noverlap = nper // 2\n    f, t, Sxx = signal.spectrogram(xc, fs=rate, nperseg=nper, noverlap=noverlap,\n                                   return_onesided=False, mode=\"psd\")\n    f = np.fft.fftshift(f)\n    Sxx = np.fft.fftshift(Sxx, axes=0)\n    in_win = np.abs(f) <= search_hz\n    win_idx = np.where(in_win)[0]",
+        "detail": "GNURadioCode.dopplerwaterfall",
+        "documentation": {}
+    },
+    {
+        "label": "fit_sine",
+        "kind": 2,
+        "importPath": "GNURadioCode.dopplerwaterfall",
+        "description": "GNURadioCode.dopplerwaterfall",
+        "peekOfCode": "def fit_sine(t, y, f_rot, detrend_deg=2):\n    \"\"\"Fit y(t) = offset + A*cos(2*pi*f_rot*t) + B*sin(2*pi*f_rot*t).\n    Optionally remove a slow polynomial trend first (kills oscillator drift).\"\"\"\n    good = np.isfinite(y)\n    t, y = t[good], y[good]\n    trend = np.zeros_like(y)\n    if detrend_deg and len(y) > detrend_deg + 1:\n        coef = np.polyfit(t, y, detrend_deg)\n        trend = np.polyval(coef, t)\n    yd = y - trend",
+        "detail": "GNURadioCode.dopplerwaterfall",
+        "documentation": {}
+    },
+    {
+        "label": "track_periodogram",
+        "kind": 2,
+        "importPath": "GNURadioCode.dopplerwaterfall",
+        "description": "GNURadioCode.dopplerwaterfall",
+        "peekOfCode": "def track_periodogram(t, y, detrend_deg=2):\n    \"\"\"FFT of the (detrended) frequency-vs-time track. A real Doppler effect\n    shows power concentrated at the rotation frequency.\"\"\"\n    good = np.isfinite(y)\n    t, y = t[good], y[good]\n    if detrend_deg and len(y) > detrend_deg + 1:\n        y = y - np.polyval(np.polyfit(t, y, detrend_deg), t)\n    dt = np.median(np.diff(t))\n    Y = np.abs(np.fft.rfft(y * np.hanning(len(y))))\n    fr = np.fft.rfftfreq(len(y), dt)",
+        "detail": "GNURadioCode.dopplerwaterfall",
+        "documentation": {}
+    },
+    {
+        "label": "make_plot",
+        "kind": 2,
+        "importPath": "GNURadioCode.dopplerwaterfall",
+        "description": "GNURadioCode.dopplerwaterfall",
+        "peekOfCode": "def make_plot(out, f, t, Sxx, track, fitres, fr, Y, f_rot, center, peak_offset):\n    abs_f = (center + peak_offset + f) / 1e6  # MHz on the waterfall axis\n    fig, ax = plt.subplots(3, 1, figsize=(10, 12))\n    # (1) Waterfall with tracked peak\n    Sdb = 10 * np.log10(Sxx + 1e-20)\n    im = ax[0].pcolormesh(t, abs_f, Sdb, shading=\"auto\", cmap=\"viridis\")\n    ax[0].plot(t, (center + peak_offset + track) / 1e6, \"r-\", lw=1.0,\n               label=\"tracked peak\")\n    ax[0].set_xlabel(\"time (s)\"); ax[0].set_ylabel(\"frequency (MHz)\")\n    ax[0].set_title(\"Waterfall (spectrogram) with tracked RFI peak\")",
+        "detail": "GNURadioCode.dopplerwaterfall",
+        "documentation": {}
+    },
+    {
+        "label": "record_iq",
+        "kind": 2,
+        "importPath": "GNURadioCode.dopplerwaterfall",
+        "description": "GNURadioCode.dopplerwaterfall",
+        "peekOfCode": "def record_iq(path, rate, center, gain, seconds, warmup=0.0,\n              block=256 * 1024):\n    \"\"\"Capture raw IQ to `path` as complex64. Writes block-by-block, so RAM use\n    stays tiny no matter how long you record - this is what makes it Pi-safe.\"\"\"\n    try:\n        from rtlsdr import RtlSdr\n    except ImportError:\n        sys.exit(\"Recording needs pyrtlsdr. Run:  pip install pyrtlsdr\\n\"\n                 \"(If the import crashes, you likely need: pip install \\\"pyrtlsdr==0.2.91\\\")\")\n    sdr = RtlSdr()",
+        "detail": "GNURadioCode.dopplerwaterfall",
+        "documentation": {}
+    },
+    {
+        "label": "run_analysis",
+        "kind": 2,
+        "importPath": "GNURadioCode.dopplerwaterfall",
+        "description": "GNURadioCode.dopplerwaterfall",
+        "peekOfCode": "def run_analysis(args):\n    if args.rot_freq:\n        f_rot = args.rot_freq\n    elif args.rpm:\n        f_rot = args.rpm / 60.0\n    else:\n        sys.exit(\"Provide --rpm or --rot-freq (the rotation rate to fit against).\")\n    rot_period = 1.0 / f_rot\n    print(f\"Rotation: {f_rot:.4f} Hz  (period {rot_period:.3f} s)\")\n    print(\"Loading IQ...\")",
+        "detail": "GNURadioCode.dopplerwaterfall",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "GNURadioCode.dopplerwaterfall",
+        "description": "GNURadioCode.dopplerwaterfall",
+        "peekOfCode": "def main():\n    ap = argparse.ArgumentParser(\n        description=\"Rotational-Doppler: record raw IQ and/or analyze it for the \"\n                    \"sine-at-rotation-frequency signature.\")\n    sub = ap.add_subparsers(dest=\"mode\", required=True)\n    # ---- record ----\n    pr = sub.add_parser(\"record\", help=\"capture raw IQ from the RTL-SDR to a file\")\n    pr.add_argument(\"file\", help=\"output file (raw complex64 IQ)\")\n    pr.add_argument(\"--rate\", type=float, default=2.4e6,\n                    help=\"sample rate, Hz. Use 250000 + center on your peak for a small Pi.\")",
+        "detail": "GNURadioCode.dopplerwaterfall",
+        "documentation": {}
+    },
+    {
+        "label": "C",
+        "kind": 5,
+        "importPath": "GNURadioCode.dopplerwaterfall",
+        "description": "GNURadioCode.dopplerwaterfall",
+        "peekOfCode": "C = 299_792_458.0  # speed of light, m/s\n# ---------------------------------------------------------------------------\n# Loading\n# ---------------------------------------------------------------------------\ndef load_iq(path, fmt, rate, max_seconds):\n    \"\"\"Load complex IQ samples, capped at max_seconds to bound memory.\"\"\"\n    max_samp = int(max_seconds * rate) if max_seconds else None\n    if fmt == \"cf32\":  # GNU Radio gr_complex = interleaved float32\n        data = np.fromfile(path, dtype=np.complex64, count=(max_samp or -1))\n        x = data",
+        "detail": "GNURadioCode.dopplerwaterfall",
         "documentation": {}
     },
     {
