@@ -1,28 +1,20 @@
 [
     {
-        "label": "argparse",
+        "label": "os",
         "kind": 6,
         "isExtraImport": true,
-        "importPath": "argparse",
-        "description": "argparse",
-        "detail": "argparse",
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
         "documentation": {}
     },
     {
-        "label": "ArgumentParser",
-        "importPath": "argparse",
-        "description": "argparse",
-        "isExtraImport": true,
-        "detail": "argparse",
-        "documentation": {}
-    },
-    {
-        "label": "sys",
+        "label": "csv",
         "kind": 6,
         "isExtraImport": true,
-        "importPath": "sys",
-        "description": "sys",
-        "detail": "sys",
+        "importPath": "csv",
+        "description": "csv",
+        "detail": "csv",
         "documentation": {}
     },
     {
@@ -61,6 +53,68 @@
         "documentation": {}
     },
     {
+        "label": "argparse",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "argparse",
+        "description": "argparse",
+        "detail": "argparse",
+        "documentation": {}
+    },
+    {
+        "label": "ArgumentParser",
+        "importPath": "argparse",
+        "description": "argparse",
+        "isExtraImport": true,
+        "detail": "argparse",
+        "documentation": {}
+    },
+    {
+        "label": "math",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "math",
+        "description": "math",
+        "detail": "math",
+        "documentation": {}
+    },
+    {
+        "label": "queue",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "queue",
+        "description": "queue",
+        "detail": "queue",
+        "documentation": {}
+    },
+    {
+        "label": "signal",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "signal",
+        "description": "signal",
+        "detail": "signal",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "threading",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "threading",
+        "description": "threading",
+        "detail": "threading",
+        "documentation": {}
+    },
+    {
         "label": "time",
         "kind": 6,
         "isExtraImport": true,
@@ -75,6 +129,38 @@
         "description": "time",
         "isExtraImport": true,
         "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "resample_poly",
+        "importPath": "scipy.signal",
+        "description": "scipy.signal",
+        "isExtraImport": true,
+        "detail": "scipy.signal",
+        "documentation": {}
+    },
+    {
+        "label": "butter",
+        "importPath": "scipy.signal",
+        "description": "scipy.signal",
+        "isExtraImport": true,
+        "detail": "scipy.signal",
+        "documentation": {}
+    },
+    {
+        "label": "filtfilt",
+        "importPath": "scipy.signal",
+        "description": "scipy.signal",
+        "isExtraImport": true,
+        "detail": "scipy.signal",
+        "documentation": {}
+    },
+    {
+        "label": "find_peaks",
+        "importPath": "scipy.signal",
+        "description": "scipy.signal",
+        "isExtraImport": true,
+        "detail": "scipy.signal",
         "documentation": {}
     },
     {
@@ -222,14 +308,6 @@
         "documentation": {}
     },
     {
-        "label": "find_peaks",
-        "importPath": "scipy.signal",
-        "description": "scipy.signal",
-        "isExtraImport": true,
-        "detail": "scipy.signal",
-        "documentation": {}
-    },
-    {
         "label": "uniform_filter1d",
         "importPath": "scipy.ndimage",
         "description": "scipy.ndimage",
@@ -268,15 +346,6 @@
         "importPath": "sip",
         "description": "sip",
         "detail": "sip",
-        "documentation": {}
-    },
-    {
-        "label": "signal",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "signal",
-        "description": "signal",
-        "detail": "signal",
         "documentation": {}
     },
     {
@@ -388,81 +457,225 @@
     {
         "label": "load_iq",
         "kind": 2,
+        "importPath": "GNURadioCode.analyzeall",
+        "description": "GNURadioCode.analyzeall",
+        "peekOfCode": "def load_iq(path):\n    x = np.fromfile(path, dtype=IQ_DTYPE)\n    if x.size == 0:\n        raise SystemExit(f\"'{path}' is empty or not readable as {IQ_DTYPE}.\")\n    return x\ndef theoretical_amp(rpm):\n    return (2 * np.pi * rpm / 60.0) * RADIUS * F0 / C\ndef track(iq, fs, win_s, src_c, pil_c, half_span, pad=8):\n    \"\"\"Per-window dual-peak tracking with parabolic sub-bin interpolation.\"\"\"\n    nwin = int(win_s * fs)",
+        "detail": "GNURadioCode.analyzeall",
+        "documentation": {}
+    },
+    {
+        "label": "theoretical_amp",
+        "kind": 2,
+        "importPath": "GNURadioCode.analyzeall",
+        "description": "GNURadioCode.analyzeall",
+        "peekOfCode": "def theoretical_amp(rpm):\n    return (2 * np.pi * rpm / 60.0) * RADIUS * F0 / C\ndef track(iq, fs, win_s, src_c, pil_c, half_span, pad=8):\n    \"\"\"Per-window dual-peak tracking with parabolic sub-bin interpolation.\"\"\"\n    nwin = int(win_s * fs)\n    if nwin < 16:\n        nwin = 16\n    hop = max(1, nwin // 2)\n    w = np.hanning(nwin)\n    nfft = nwin * pad",
+        "detail": "GNURadioCode.analyzeall",
+        "documentation": {}
+    },
+    {
+        "label": "track",
+        "kind": 2,
+        "importPath": "GNURadioCode.analyzeall",
+        "description": "GNURadioCode.analyzeall",
+        "peekOfCode": "def track(iq, fs, win_s, src_c, pil_c, half_span, pad=8):\n    \"\"\"Per-window dual-peak tracking with parabolic sub-bin interpolation.\"\"\"\n    nwin = int(win_s * fs)\n    if nwin < 16:\n        nwin = 16\n    hop = max(1, nwin // 2)\n    w = np.hanning(nwin)\n    nfft = nwin * pad\n    freqs = np.fft.fftshift(np.fft.fftfreq(nfft, 1.0 / fs))\n    df = freqs[1] - freqs[0]",
+        "detail": "GNURadioCode.analyzeall",
+        "documentation": {}
+    },
+    {
+        "label": "fit_sinusoid",
+        "kind": 2,
+        "importPath": "GNURadioCode.analyzeall",
+        "description": "GNURadioCode.analyzeall",
+        "peekOfCode": "def fit_sinusoid(tw, corr, f_rot):\n    \"\"\"Fit corrected(t) = poly2 + A sin(2*pi f_rot t + phi). Returns amp, err, trend, resid, offset.\"\"\"\n    W = 2 * np.pi * f_rot\n    X = np.column_stack([np.ones_like(tw), tw, tw ** 2, np.sin(W * tw), np.cos(W * tw)])\n    beta, *_ = np.linalg.lstsq(X, corr, rcond=None)\n    resid = corr - X @ beta\n    amp = np.hypot(beta[3], beta[4])\n    dof = max(1, len(corr) - 5)\n    cov = (np.sum(resid ** 2) / dof) * np.linalg.inv(X.T @ X)\n    amp_err = 0.0",
+        "detail": "GNURadioCode.analyzeall",
+        "documentation": {}
+    },
+    {
+        "label": "win_for",
+        "kind": 2,
+        "importPath": "GNURadioCode.analyzeall",
+        "description": "GNURadioCode.analyzeall",
+        "peekOfCode": "def win_for(rpm):\n    if rpm <= 0:\n        return 2.0\n    return float(np.clip((60.0 / rpm) / 12.0, 0.08, 4.0))\ndef waterfall_fig(iq, fs, path, rpm):\n    nwin = int(min(0.5, max(0.05, 4.0 / max(1, rpm))) * fs)\n    nwin = max(256, nwin)\n    hop = nwin // 2\n    w = np.hanning(nwin)\n    cols, times = [], []",
+        "detail": "GNURadioCode.analyzeall",
+        "documentation": {}
+    },
+    {
+        "label": "waterfall_fig",
+        "kind": 2,
+        "importPath": "GNURadioCode.analyzeall",
+        "description": "GNURadioCode.analyzeall",
+        "peekOfCode": "def waterfall_fig(iq, fs, path, rpm):\n    nwin = int(min(0.5, max(0.05, 4.0 / max(1, rpm))) * fs)\n    nwin = max(256, nwin)\n    hop = nwin // 2\n    w = np.hanning(nwin)\n    cols, times = [], []\n    for s in range(0, len(iq) - nwin, hop):\n        cols.append(np.fft.fftshift(np.abs(np.fft.fft(iq[s:s + nwin] * w))))\n        times.append((s + nwin / 2) / fs)\n    if not cols:",
+        "detail": "GNURadioCode.analyzeall",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "GNURadioCode.analyzeall",
+        "description": "GNURadioCode.analyzeall",
+        "peekOfCode": "def main():\n    os.makedirs(OUTDIR, exist_ok=True)\n    summary = []\n    print(\"=\" * 70)\n    print(\"DAWC ANALYSIS  (radius %.3g m, f0 %.6g Hz)\" % (RADIUS, F0))\n    print(\"=\" * 70)\n    for rpm, path in RUNS:\n        if not os.path.exists(path):\n            print(f\"  !! {path} not found — skipping {rpm} RPM\")\n            continue",
+        "detail": "GNURadioCode.analyzeall",
+        "documentation": {}
+    },
+    {
+        "label": "SOURCE_OFFSET",
+        "kind": 5,
+        "importPath": "GNURadioCode.analyzeall",
+        "description": "GNURadioCode.analyzeall",
+        "peekOfCode": "SOURCE_OFFSET = 1500.0          # baseband frequency of the SIGNAL tone, Hz (0 = at center)\nPILOT_OFFSET  = 3000.0 + SOURCE_OFFSET       # baseband frequency of the PILOT tone, Hz\nF0            = 1420.4e6     # observing frequency, Hz\nRADIUS        = 1.0          # rotation radius, m\nIQ_DTYPE      = np.complex64 # GNU Radio 'complex float' = complex64; change if needed\nOUTDIR        = \".\"          # where to write figures + summary.csv\n# List each run as (rpm, path-to-IQ-file). Use rpm=0 for the stationary null.\nRUNS = [\n    (0,  \"dawc_static.c64\"),\n    (2,  \"dawc_run01.c64\"),",
+        "detail": "GNURadioCode.analyzeall",
+        "documentation": {}
+    },
+    {
+        "label": "RUNS",
+        "kind": 5,
+        "importPath": "GNURadioCode.analyzeall",
+        "description": "GNURadioCode.analyzeall",
+        "peekOfCode": "RUNS = [\n    (0,  \"dawc_static.c64\"),\n    (2,  \"dawc_run01.c64\"),\n    (4, \"v4_4rpm.c64\"),\n    (10, \"dawc_10rpm.c64\"),\n]\n# =====================================================\nC = 299_792_458.0\ndef load_iq(path):\n    x = np.fromfile(path, dtype=IQ_DTYPE)",
+        "detail": "GNURadioCode.analyzeall",
+        "documentation": {}
+    },
+    {
+        "label": "C",
+        "kind": 5,
+        "importPath": "GNURadioCode.analyzeall",
+        "description": "GNURadioCode.analyzeall",
+        "peekOfCode": "C = 299_792_458.0\ndef load_iq(path):\n    x = np.fromfile(path, dtype=IQ_DTYPE)\n    if x.size == 0:\n        raise SystemExit(f\"'{path}' is empty or not readable as {IQ_DTYPE}.\")\n    return x\ndef theoretical_amp(rpm):\n    return (2 * np.pi * rpm / 60.0) * RADIUS * F0 / C\ndef track(iq, fs, win_s, src_c, pil_c, half_span, pad=8):\n    \"\"\"Per-window dual-peak tracking with parabolic sub-bin interpolation.\"\"\"",
+        "detail": "GNURadioCode.analyzeall",
+        "documentation": {}
+    },
+    {
+        "label": "DualTracker",
+        "kind": 6,
+        "importPath": "GNURadioCode.analyzecapture",
+        "description": "GNURadioCode.analyzecapture",
+        "peekOfCode": "class DualTracker:\n    def __init__(self, fs_bb, nwin, hop, src_band, pil_band, pad=8):\n        self.fs_bb = fs_bb\n        self.nwin = nwin\n        self.hop = hop\n        self.win = np.hanning(nwin)\n        self.win_gain = self.win.sum()\n        self.nfft = int(nwin * pad)\n        f = np.fft.fftfreq(self.nfft, d=1.0 / fs_bb)\n        self.order = np.argsort(f)",
+        "detail": "GNURadioCode.analyzecapture",
+        "documentation": {}
+    },
+    {
+        "label": "load_iq",
+        "kind": 2,
+        "importPath": "GNURadioCode.analyzecapture",
+        "description": "GNURadioCode.analyzecapture",
+        "peekOfCode": "def load_iq(path):\n    return np.fromfile(path, dtype=np.complex64)\ndef load_angle_csv(path):\n    t, ang, rpm = [], [], []\n    with open(path) as f:\n        for row in csv.DictReader(f):\n            t.append(float(row[\"t_s\"]))\n            ang.append(float(row[\"angle_rad\"]))\n            rpm.append(float(row[\"rpm\"]))\n    return np.array(t), np.array(ang), np.array(rpm)",
+        "detail": "GNURadioCode.analyzecapture",
+        "documentation": {}
+    },
+    {
+        "label": "load_angle_csv",
+        "kind": 2,
+        "importPath": "GNURadioCode.analyzecapture",
+        "description": "GNURadioCode.analyzecapture",
+        "peekOfCode": "def load_angle_csv(path):\n    t, ang, rpm = [], [], []\n    with open(path) as f:\n        for row in csv.DictReader(f):\n            t.append(float(row[\"t_s\"]))\n            ang.append(float(row[\"angle_rad\"]))\n            rpm.append(float(row[\"rpm\"]))\n    return np.array(t), np.array(ang), np.array(rpm)\ndef track(iq, fs, win, span, pilot_off):\n    nwin = int(round(win * fs))",
+        "detail": "GNURadioCode.analyzecapture",
+        "documentation": {}
+    },
+    {
+        "label": "track",
+        "kind": 2,
+        "importPath": "GNURadioCode.analyzecapture",
+        "description": "GNURadioCode.analyzecapture",
+        "peekOfCode": "def track(iq, fs, win, span, pilot_off):\n    nwin = int(round(win * fs))\n    tr = DualTracker(fs, nwin, nwin // 2, (-span / 2, span / 2),\n                     (pilot_off - span / 2, pilot_off + span / 2))\n    rows = []\n    for i in range(0, len(iq), 40000):\n        rows += tr.push(iq[i:i + 40000])\n    hop = nwin // 2\n    tw = np.array([(j * hop + nwin / 2) / fs for j in range(len(rows))])\n    sf = np.array([q[0] for q in rows])",
+        "detail": "GNURadioCode.analyzecapture",
+        "documentation": {}
+    },
+    {
+        "label": "fit",
+        "kind": 2,
+        "importPath": "GNURadioCode.analyzecapture",
+        "description": "GNURadioCode.analyzecapture",
+        "peekOfCode": "def fit(tw, corr, theta):\n    X = np.column_stack([np.ones_like(tw), tw, tw ** 2, np.sin(theta), np.cos(theta)])\n    beta, *_ = np.linalg.lstsq(X, corr, rcond=None)\n    resid = corr - X @ beta\n    amp = np.hypot(beta[3], beta[4])\n    phase = np.arctan2(beta[4], beta[3])\n    dof = len(corr) - 5\n    cov = (np.sum(resid ** 2) / dof) * np.linalg.inv(X.T @ X)\n    amp_err = np.sqrt((beta[3] / amp) ** 2 * cov[3, 3] + (beta[4] / amp) ** 2 * cov[4, 4]\n                      + 2 * (beta[3] / amp) * (beta[4] / amp) * cov[3, 4])",
+        "detail": "GNURadioCode.analyzecapture",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "GNURadioCode.analyzecapture",
+        "description": "GNURadioCode.analyzecapture",
+        "peekOfCode": "def main():\n    ap = argparse.ArgumentParser(description=\"Analyze a DAWC capture (.c64 + .csv)\")\n    ap.add_argument(\"--iq\", required=True, help=\"raw complex64 baseband IQ file\")\n    ap.add_argument(\"--csv\", help=\"companion CSV with t_s, angle_rad, rpm (for fitting angle)\")\n    ap.add_argument(\"--fs\", type=float, default=8000.0)\n    ap.add_argument(\"--pilot-offset\", type=float, default=3000.0)\n    ap.add_argument(\"--span\", type=float, default=8.0)\n    ap.add_argument(\"--win\", type=float, default=2.0)\n    ap.add_argument(\"--f0\", type=float, default=1420.405751e6)\n    ap.add_argument(\"--out\", default=\"analysis\")",
+        "detail": "GNURadioCode.analyzecapture",
+        "documentation": {}
+    },
+    {
+        "label": "C",
+        "kind": 5,
+        "importPath": "GNURadioCode.analyzecapture",
+        "description": "GNURadioCode.analyzecapture",
+        "peekOfCode": "C = 299_792_458.0\nclass DualTracker:\n    def __init__(self, fs_bb, nwin, hop, src_band, pil_band, pad=8):\n        self.fs_bb = fs_bb\n        self.nwin = nwin\n        self.hop = hop\n        self.win = np.hanning(nwin)\n        self.win_gain = self.win.sum()\n        self.nfft = int(nwin * pad)\n        f = np.fft.fftfreq(self.nfft, d=1.0 / fs_bb)",
+        "detail": "GNURadioCode.analyzecapture",
+        "documentation": {}
+    },
+    {
+        "label": "AdfPilot",
+        "kind": 6,
         "importPath": "GNURadioCode.dopplerwaterfall",
         "description": "GNURadioCode.dopplerwaterfall",
-        "peekOfCode": "def load_iq(path, fmt, rate, max_seconds):\n    \"\"\"Load complex IQ samples, capped at max_seconds to bound memory.\"\"\"\n    max_samp = int(max_seconds * rate) if max_seconds else None\n    if fmt == \"cf32\":  # GNU Radio gr_complex = interleaved float32\n        data = np.fromfile(path, dtype=np.complex64, count=(max_samp or -1))\n        x = data\n    elif fmt == \"u8\":  # rtl_sdr raw: interleaved unsigned bytes, 127.5-centered\n        raw = np.fromfile(path, dtype=np.uint8,\n                          count=(2 * max_samp if max_samp else -1))\n        raw = raw[: 2 * (len(raw) // 2)]",
+        "peekOfCode": "class AdfPilot:\n    def __init__(self, spi_bus, spi_dev, le_gpio, lock_gpio, spi_hz=1_000_000):\n        if spidev is None or GPIO is None:\n            raise RuntimeError(\"spidev / RPi.GPIO not available\")\n        self.spi = spidev.SpiDev()\n        self.spi.open(spi_bus, spi_dev)\n        self.spi.max_speed_hz = spi_hz\n        self.spi.mode = 0\n        self.le = le_gpio\n        self.lock = lock_gpio",
         "detail": "GNURadioCode.dopplerwaterfall",
         "documentation": {}
     },
     {
-        "label": "find_peak_offset",
-        "kind": 2,
+        "label": "SdrSource",
+        "kind": 6,
         "importPath": "GNURadioCode.dopplerwaterfall",
         "description": "GNURadioCode.dopplerwaterfall",
-        "peekOfCode": "def find_peak_offset(x, rate, nfft=8192, dc_guard_hz=3000.0):\n    \"\"\"Average power spectrum; return the offset (Hz) of the strongest peak,\n    ignoring a small guard band around DC (the RTL-SDR's center spike).\"\"\"\n    f, pxx = signal.welch(x, fs=rate, nperseg=min(nfft, x.size),\n                          return_onesided=False, scaling=\"density\")\n    f = np.fft.fftshift(f)\n    pxx = np.fft.fftshift(pxx)\n    mask = np.abs(f) > dc_guard_hz\n    idx = np.argmax(pxx[mask])\n    return float(f[mask][idx])",
+        "peekOfCode": "class SdrSource:\n    def __init__(self, center_hz, fs_raw, gain, ppm=0, device_index=0):\n        if RtlSdr is None:\n            raise RuntimeError(\"pyrtlsdr not installed\")\n        self.sdr = RtlSdr(device_index=device_index)\n        self.sdr.sample_rate = fs_raw\n        self.sdr.center_freq = center_hz\n        self.sdr.freq_correction = ppm if ppm else 1\n        self.sdr.gain = gain\n        self.fs_raw = fs_raw",
         "detail": "GNURadioCode.dopplerwaterfall",
         "documentation": {}
     },
     {
-        "label": "channelize",
-        "kind": 2,
+        "label": "MotorController",
+        "kind": 6,
         "importPath": "GNURadioCode.dopplerwaterfall",
         "description": "GNURadioCode.dopplerwaterfall",
-        "peekOfCode": "def channelize(x, rate, peak_offset, target_rate):\n    \"\"\"Mix the peak to 0 Hz and decimate to ~target_rate so the spectrogram is\n    small and high-resolution. Returns (baseband_signal, new_rate).\"\"\"\n    n = np.arange(x.size, dtype=np.float64)\n    x0 = x * np.exp(-2j * np.pi * peak_offset * n / rate).astype(np.complex64)\n    decim = max(1, int(round(rate / target_rate)))\n    if decim > 1:\n        for q in _factorize(decim):\n            if q > 1:\n                x0 = signal.decimate(x0, q, ftype=\"fir\", zero_phase=True)",
+        "peekOfCode": "class MotorController:\n    def __init__(self, port, slave=1, baud=9600):\n        if minimalmodbus is None:\n            raise RuntimeError(\"minimalmodbus not installed\")\n        self.inst = minimalmodbus.Instrument(port, slave)\n        self.inst.serial.baudrate = baud\n        self.inst.serial.timeout = 0.3\n        self.inst.mode = minimalmodbus.MODE_RTU\n    def set_rpm(self, rpm):\n        self.inst.write_register(REG_SPEED, int(round(abs(rpm))), functioncode=6)",
         "detail": "GNURadioCode.dopplerwaterfall",
         "documentation": {}
     },
     {
-        "label": "spectrogram_and_track",
-        "kind": 2,
+        "label": "DualTracker",
+        "kind": 6,
         "importPath": "GNURadioCode.dopplerwaterfall",
         "description": "GNURadioCode.dopplerwaterfall",
-        "peekOfCode": "def spectrogram_and_track(xc, rate, slice_sec, search_hz):\n    \"\"\"Build the spectrogram and track the peak (near 0 Hz) in each time slice.\"\"\"\n    nper = max(16, int(slice_sec * rate))\n    noverlap = nper // 2\n    f, t, Sxx = signal.spectrogram(xc, fs=rate, nperseg=nper, noverlap=noverlap,\n                                   return_onesided=False, mode=\"psd\")\n    f = np.fft.fftshift(f)\n    Sxx = np.fft.fftshift(Sxx, axes=0)\n    in_win = np.abs(f) <= search_hz\n    win_idx = np.where(in_win)[0]",
+        "peekOfCode": "class DualTracker:\n    def __init__(self, fs_bb, nwin, hop, src_band, pil_band, pad=8):\n        self.fs_bb = fs_bb\n        self.nwin = nwin\n        self.hop = hop\n        self.win = np.hanning(nwin)\n        self.win_gain = self.win.sum()\n        self.nfft = int(nwin * pad)\n        f = np.fft.fftfreq(self.nfft, d=1.0 / fs_bb)\n        self.order = np.argsort(f)",
         "detail": "GNURadioCode.dopplerwaterfall",
         "documentation": {}
     },
     {
-        "label": "fit_sine",
-        "kind": 2,
+        "label": "Acquisition",
+        "kind": 6,
         "importPath": "GNURadioCode.dopplerwaterfall",
         "description": "GNURadioCode.dopplerwaterfall",
-        "peekOfCode": "def fit_sine(t, y, f_rot, detrend_deg=2):\n    \"\"\"Fit y(t) = offset + A*cos(2*pi*f_rot*t) + B*sin(2*pi*f_rot*t).\n    Optionally remove a slow polynomial trend first (kills oscillator drift).\"\"\"\n    good = np.isfinite(y)\n    t, y = t[good], y[good]\n    trend = np.zeros_like(y)\n    if detrend_deg and len(y) > detrend_deg + 1:\n        coef = np.polyfit(t, y, detrend_deg)\n        trend = np.polyval(coef, t)\n    yd = y - trend",
+        "peekOfCode": "class Acquisition:\n    def __init__(self, args):\n        self.args = args\n        self.decim = int(round(args.fs_raw / args.fs_bb))\n        self.fs_bb = args.fs_raw / self.decim\n        self.shift = args.source_offset_hz\n        self.pilot_bb_nominal = args.pilot_offset_hz - args.source_offset_hz\n        self.q = queue.Queue(maxsize=64)\n        self.stop_flag = threading.Event()\n        self.t0 = None",
         "detail": "GNURadioCode.dopplerwaterfall",
         "documentation": {}
     },
     {
-        "label": "track_periodogram",
+        "label": "adf4351_registers",
         "kind": 2,
         "importPath": "GNURadioCode.dopplerwaterfall",
         "description": "GNURadioCode.dopplerwaterfall",
-        "peekOfCode": "def track_periodogram(t, y, detrend_deg=2):\n    \"\"\"FFT of the (detrended) frequency-vs-time track. A real Doppler effect\n    shows power concentrated at the rotation frequency.\"\"\"\n    good = np.isfinite(y)\n    t, y = t[good], y[good]\n    if detrend_deg and len(y) > detrend_deg + 1:\n        y = y - np.polyval(np.polyfit(t, y, detrend_deg), t)\n    dt = np.median(np.diff(t))\n    Y = np.abs(np.fft.rfft(y * np.hanning(len(y))))\n    fr = np.fft.rfftfreq(len(y), dt)",
+        "peekOfCode": "def adf4351_registers(fout, fref=10e6, chan_spacing=10e3, rf_power=3, mux_lock=True):\n    rf_div_sel = 0\n    div = 1\n    while fout * div < 2.2e9 and div < 64:\n        div *= 2\n        rf_div_sel += 1\n    vco = fout * div\n    r_counter = 1\n    fpfd = fref / r_counter\n    mod = int(round(fpfd / chan_spacing))",
         "detail": "GNURadioCode.dopplerwaterfall",
         "documentation": {}
     },
     {
-        "label": "make_plot",
+        "label": "self_test",
         "kind": 2,
         "importPath": "GNURadioCode.dopplerwaterfall",
         "description": "GNURadioCode.dopplerwaterfall",
-        "peekOfCode": "def make_plot(out, f, t, Sxx, track, fitres, fr, Y, f_rot, center, peak_offset):\n    abs_f = (center + peak_offset + f) / 1e6  # MHz on the waterfall axis\n    fig, ax = plt.subplots(3, 1, figsize=(10, 12))\n    # (1) Waterfall with tracked peak\n    Sdb = 10 * np.log10(Sxx + 1e-20)\n    im = ax[0].pcolormesh(t, abs_f, Sdb, shading=\"auto\", cmap=\"viridis\")\n    ax[0].plot(t, (center + peak_offset + track) / 1e6, \"r-\", lw=1.0,\n               label=\"tracked peak\")\n    ax[0].set_xlabel(\"time (s)\"); ax[0].set_ylabel(\"frequency (MHz)\")\n    ax[0].set_title(\"Waterfall (spectrogram) with tracked RFI peak\")",
+        "peekOfCode": "def self_test():\n    regs, actual = adf4351_registers(1420.405751e6)\n    print(\"register calc for 1420.405751 MHz:\")\n    print(\"  actual pilot =\", f\"{actual/1e6:.5f} MHz\")\n    print(\"  regs =\", [hex(r) for r in regs])\n    fs_bb = 8000.0\n    nwin = int(2.5 * fs_bb)\n    pilot_nom = 3000.0\n    tr = DualTracker(fs_bb, nwin, nwin // 2, (-4, 4),\n                     (pilot_nom - 4, pilot_nom + 4))",
         "detail": "GNURadioCode.dopplerwaterfall",
         "documentation": {}
     },
     {
-        "label": "record_iq",
+        "label": "build_parser",
         "kind": 2,
         "importPath": "GNURadioCode.dopplerwaterfall",
         "description": "GNURadioCode.dopplerwaterfall",
-        "peekOfCode": "def record_iq(path, rate, center, gain, seconds, warmup=0.0,\n              block=256 * 1024):\n    \"\"\"Capture raw IQ to `path` as complex64. Writes block-by-block, so RAM use\n    stays tiny no matter how long you record - this is what makes it Pi-safe.\"\"\"\n    try:\n        from rtlsdr import RtlSdr\n    except ImportError:\n        sys.exit(\"Recording needs pyrtlsdr. Run:  pip install pyrtlsdr\\n\"\n                 \"(If the import crashes, you likely need: pip install \\\"pyrtlsdr==0.2.91\\\")\")\n    sdr = RtlSdr()",
-        "detail": "GNURadioCode.dopplerwaterfall",
-        "documentation": {}
-    },
-    {
-        "label": "run_analysis",
-        "kind": 2,
-        "importPath": "GNURadioCode.dopplerwaterfall",
-        "description": "GNURadioCode.dopplerwaterfall",
-        "peekOfCode": "def run_analysis(args):\n    if args.rot_freq:\n        f_rot = args.rot_freq\n    elif args.rpm:\n        f_rot = args.rpm / 60.0\n    else:\n        sys.exit(\"Provide --rpm or --rot-freq (the rotation rate to fit against).\")\n    rot_period = 1.0 / f_rot\n    print(f\"Rotation: {f_rot:.4f} Hz  (period {rot_period:.3f} s)\")\n    print(\"Loading IQ...\")",
+        "peekOfCode": "def build_parser():\n    p = argparse.ArgumentParser()\n    p.add_argument(\"--center-hz\", type=float, default=1420.405751e6)\n    p.add_argument(\"--fs-raw\", type=float, default=1.024e6)\n    p.add_argument(\"--fs-bb\", type=float, default=8000.0)\n    p.add_argument(\"--gain\", default=\"auto\")\n    p.add_argument(\"--ppm\", type=int, default=0)\n    p.add_argument(\"--source-offset-hz\", type=float, default=0.0)\n    p.add_argument(\"--pilot-offset-hz\", type=float, default=3000.0)\n    p.add_argument(\"--span\", type=float, default=8.0)",
         "detail": "GNURadioCode.dopplerwaterfall",
         "documentation": {}
     },
@@ -471,17 +684,116 @@
         "kind": 2,
         "importPath": "GNURadioCode.dopplerwaterfall",
         "description": "GNURadioCode.dopplerwaterfall",
-        "peekOfCode": "def main():\n    ap = argparse.ArgumentParser(\n        description=\"Rotational-Doppler: record raw IQ and/or analyze it for the \"\n                    \"sine-at-rotation-frequency signature.\")\n    sub = ap.add_subparsers(dest=\"mode\", required=True)\n    # ---- record ----\n    pr = sub.add_parser(\"record\", help=\"capture raw IQ from the RTL-SDR to a file\")\n    pr.add_argument(\"file\", help=\"output file (raw complex64 IQ)\")\n    pr.add_argument(\"--rate\", type=float, default=2.4e6,\n                    help=\"sample rate, Hz. Use 250000 + center on your peak for a small Pi.\")",
+        "peekOfCode": "def main():\n    args = build_parser().parse_args()\n    if args.self_test:\n        self_test()\n        return\n    if args.gain != \"auto\":\n        args.gain = float(args.gain)\n    acq = Acquisition(args)\n    signal.signal(signal.SIGINT, lambda *_: acq.stop_flag.set())\n    acq.run()",
         "detail": "GNURadioCode.dopplerwaterfall",
+        "documentation": {}
+    },
+    {
+        "label": "REG_CONTROL",
+        "kind": 5,
+        "importPath": "GNURadioCode.dopplerwaterfall",
+        "description": "GNURadioCode.dopplerwaterfall",
+        "peekOfCode": "REG_CONTROL = 0x8106\nREG_SPEED = 0x8110\nREG_ACTUAL = 0x8206\nCTRL_STOP = 0x0000\nCTRL_FWD = 0x0001\nCTRL_REV = 0x0002\ndef adf4351_registers(fout, fref=10e6, chan_spacing=10e3, rf_power=3, mux_lock=True):\n    rf_div_sel = 0\n    div = 1\n    while fout * div < 2.2e9 and div < 64:",
+        "detail": "GNURadioCode.dopplerwaterfall",
+        "documentation": {}
+    },
+    {
+        "label": "REG_SPEED",
+        "kind": 5,
+        "importPath": "GNURadioCode.dopplerwaterfall",
+        "description": "GNURadioCode.dopplerwaterfall",
+        "peekOfCode": "REG_SPEED = 0x8110\nREG_ACTUAL = 0x8206\nCTRL_STOP = 0x0000\nCTRL_FWD = 0x0001\nCTRL_REV = 0x0002\ndef adf4351_registers(fout, fref=10e6, chan_spacing=10e3, rf_power=3, mux_lock=True):\n    rf_div_sel = 0\n    div = 1\n    while fout * div < 2.2e9 and div < 64:\n        div *= 2",
+        "detail": "GNURadioCode.dopplerwaterfall",
+        "documentation": {}
+    },
+    {
+        "label": "REG_ACTUAL",
+        "kind": 5,
+        "importPath": "GNURadioCode.dopplerwaterfall",
+        "description": "GNURadioCode.dopplerwaterfall",
+        "peekOfCode": "REG_ACTUAL = 0x8206\nCTRL_STOP = 0x0000\nCTRL_FWD = 0x0001\nCTRL_REV = 0x0002\ndef adf4351_registers(fout, fref=10e6, chan_spacing=10e3, rf_power=3, mux_lock=True):\n    rf_div_sel = 0\n    div = 1\n    while fout * div < 2.2e9 and div < 64:\n        div *= 2\n        rf_div_sel += 1",
+        "detail": "GNURadioCode.dopplerwaterfall",
+        "documentation": {}
+    },
+    {
+        "label": "CTRL_STOP",
+        "kind": 5,
+        "importPath": "GNURadioCode.dopplerwaterfall",
+        "description": "GNURadioCode.dopplerwaterfall",
+        "peekOfCode": "CTRL_STOP = 0x0000\nCTRL_FWD = 0x0001\nCTRL_REV = 0x0002\ndef adf4351_registers(fout, fref=10e6, chan_spacing=10e3, rf_power=3, mux_lock=True):\n    rf_div_sel = 0\n    div = 1\n    while fout * div < 2.2e9 and div < 64:\n        div *= 2\n        rf_div_sel += 1\n    vco = fout * div",
+        "detail": "GNURadioCode.dopplerwaterfall",
+        "documentation": {}
+    },
+    {
+        "label": "CTRL_FWD",
+        "kind": 5,
+        "importPath": "GNURadioCode.dopplerwaterfall",
+        "description": "GNURadioCode.dopplerwaterfall",
+        "peekOfCode": "CTRL_FWD = 0x0001\nCTRL_REV = 0x0002\ndef adf4351_registers(fout, fref=10e6, chan_spacing=10e3, rf_power=3, mux_lock=True):\n    rf_div_sel = 0\n    div = 1\n    while fout * div < 2.2e9 and div < 64:\n        div *= 2\n        rf_div_sel += 1\n    vco = fout * div\n    r_counter = 1",
+        "detail": "GNURadioCode.dopplerwaterfall",
+        "documentation": {}
+    },
+    {
+        "label": "CTRL_REV",
+        "kind": 5,
+        "importPath": "GNURadioCode.dopplerwaterfall",
+        "description": "GNURadioCode.dopplerwaterfall",
+        "peekOfCode": "CTRL_REV = 0x0002\ndef adf4351_registers(fout, fref=10e6, chan_spacing=10e3, rf_power=3, mux_lock=True):\n    rf_div_sel = 0\n    div = 1\n    while fout * div < 2.2e9 and div < 64:\n        div *= 2\n        rf_div_sel += 1\n    vco = fout * div\n    r_counter = 1\n    fpfd = fref / r_counter",
+        "detail": "GNURadioCode.dopplerwaterfall",
+        "documentation": {}
+    },
+    {
+        "label": "phase_noise",
+        "kind": 2,
+        "importPath": "GNURadioCode.genv4cap",
+        "description": "GNURadioCode.genv4cap",
+        "peekOfCode": "def phase_noise(n, rms_hz, rng):\n    \"\"\"Bounded slow frequency wander -> integrated to phase (phase-noise proxy).\"\"\"\n    fn = rng.standard_normal(n)\n    b, a = butter(2, 0.5 / (FS / 2))          # ~0.5 Hz cutoff\n    fn = filtfilt(b, a, fn)\n    fn *= rms_hz / (np.std(fn) + 1e-12)\n    return 2 * np.pi * np.cumsum(fn) / FS\ndef track(iq, win_s, src_c, pil_c, half=8.0, pad=8):\n    nwin = int(win_s * FS); hop = nwin // 2; w = np.hanning(nwin)\n    nfft = nwin * pad",
+        "detail": "GNURadioCode.genv4cap",
+        "documentation": {}
+    },
+    {
+        "label": "track",
+        "kind": 2,
+        "importPath": "GNURadioCode.genv4cap",
+        "description": "GNURadioCode.genv4cap",
+        "peekOfCode": "def track(iq, win_s, src_c, pil_c, half=8.0, pad=8):\n    nwin = int(win_s * FS); hop = nwin // 2; w = np.hanning(nwin)\n    nfft = nwin * pad\n    freqs = np.fft.fftshift(np.fft.fftfreq(nfft, 1 / FS)); df = freqs[1] - freqs[0]\n    bs = lambda c: np.where((freqs >= c - half) & (freqs <= c + half))[0]\n    si, pi = bs(src_c), bs(pil_c)\n    def pk(mag, idx):\n        k = idx[int(np.argmax(mag[idx]))]\n        if k <= 0 or k >= len(mag) - 1: return freqs[k], mag[k]\n        a, b, c = mag[k-1], mag[k], mag[k+1]; d = a - 2*b + c",
+        "detail": "GNURadioCode.genv4cap",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "GNURadioCode.genv4cap",
+        "description": "GNURadioCode.genv4cap",
+        "peekOfCode": "def main():\n    rng = np.random.default_rng(SEED)\n    n = int(DUR * FS); t = np.arange(n) / FS\n    tag = OUT_TAG or f\"v4_{int(RPM)}rpm\"\n    # --- shared SDR TCXO drift (warm-up transient + slow wander) ---\n    warm = DRIFT_HZ * 0.5 * np.exp(-t / (DUR * 0.4))                     # settling transient\n    wander = (0.6*np.sin(2*np.pi*0.004*t + rng.uniform(0,6.28))\n              + 0.4*np.sin(2*np.pi*0.011*t + rng.uniform(0,6.28)))\n    drift = warm + DRIFT_HZ * 0.5 * wander                              # ~few Hz, shared\n    # --- rotation (with speed jitter) + Doppler ---",
+        "detail": "GNURadioCode.genv4cap",
+        "documentation": {}
+    },
+    {
+        "label": "PILOT_OFF",
+        "kind": 5,
+        "importPath": "GNURadioCode.genv4cap",
+        "description": "GNURadioCode.genv4cap",
+        "peekOfCode": "PILOT_OFF = 4500.0        # pilot baseband frequency (Hz)\nSRC_SNR   = 16.0          # source SNR in dB (moderate RFI carrier through the LNA)\nPILOT_SNR = 19.0          # pilot SNR in dB (injected; typically stronger)\nDRIFT_HZ  = 5.0           # peak SDR TCXO drift over the run (V4 ~1 ppm, post-warmup)\nPN_HZ     = 0.15          # per-tone phase-noise frequency wander, RMS (Hz)\nDC_LEVEL  = 0.12          # residual DC amplitude (rel. to tone) after decimation\nSPUR_HZ   = 1800.0        # an internal spur location (Hz); set None to disable\nSPUR_LVL  = 0.10          # spur amplitude (rel. to tone)\nSEED      = 11\nOUT_TAG   = None          # output name; None -> auto \"v4_{rpm}rpm\"",
+        "detail": "GNURadioCode.genv4cap",
+        "documentation": {}
+    },
+    {
+        "label": "PILOT_SNR",
+        "kind": 5,
+        "importPath": "GNURadioCode.genv4cap",
+        "description": "GNURadioCode.genv4cap",
+        "peekOfCode": "PILOT_SNR = 19.0          # pilot SNR in dB (injected; typically stronger)\nDRIFT_HZ  = 5.0           # peak SDR TCXO drift over the run (V4 ~1 ppm, post-warmup)\nPN_HZ     = 0.15          # per-tone phase-noise frequency wander, RMS (Hz)\nDC_LEVEL  = 0.12          # residual DC amplitude (rel. to tone) after decimation\nSPUR_HZ   = 1800.0        # an internal spur location (Hz); set None to disable\nSPUR_LVL  = 0.10          # spur amplitude (rel. to tone)\nSEED      = 11\nOUT_TAG   = None          # output name; None -> auto \"v4_{rpm}rpm\"\n# ===============================================\nC = 299_792_458.0",
+        "detail": "GNURadioCode.genv4cap",
         "documentation": {}
     },
     {
         "label": "C",
         "kind": 5,
-        "importPath": "GNURadioCode.dopplerwaterfall",
-        "description": "GNURadioCode.dopplerwaterfall",
-        "peekOfCode": "C = 299_792_458.0  # speed of light, m/s\n# ---------------------------------------------------------------------------\n# Loading\n# ---------------------------------------------------------------------------\ndef load_iq(path, fmt, rate, max_seconds):\n    \"\"\"Load complex IQ samples, capped at max_seconds to bound memory.\"\"\"\n    max_samp = int(max_seconds * rate) if max_seconds else None\n    if fmt == \"cf32\":  # GNU Radio gr_complex = interleaved float32\n        data = np.fromfile(path, dtype=np.complex64, count=(max_samp or -1))\n        x = data",
-        "detail": "GNURadioCode.dopplerwaterfall",
+        "importPath": "GNURadioCode.genv4cap",
+        "description": "GNURadioCode.genv4cap",
+        "peekOfCode": "C = 299_792_458.0\ndef phase_noise(n, rms_hz, rng):\n    \"\"\"Bounded slow frequency wander -> integrated to phase (phase-noise proxy).\"\"\"\n    fn = rng.standard_normal(n)\n    b, a = butter(2, 0.5 / (FS / 2))          # ~0.5 Hz cutoff\n    fn = filtfilt(b, a, fn)\n    fn *= rms_hz / (np.std(fn) + 1e-12)\n    return 2 * np.pi * np.cumsum(fn) / FS\ndef track(iq, win_s, src_c, pil_c, half=8.0, pad=8):\n    nwin = int(win_s * FS); hop = nwin // 2; w = np.hanning(nwin)",
+        "detail": "GNURadioCode.genv4cap",
         "documentation": {}
     },
     {
@@ -806,6 +1118,33 @@
         "description": "GNURadioCode.sdrtesting",
         "peekOfCode": "stream = sd.OutputStream(samplerate=int(audio_rate), channels=1, dtype='float32')\nstream.start()\nprint(f\"Tuned to {F_station/1e6:.1f} MHz — Ctrl+C to stop.\")\ntry:\n    while True:\n        samples = sdr.read_samples(N)\n        # Mix the station down to baseband (phase kept continuous across blocks)\n        n = np.arange(len(samples))\n        lo = np.exp(1j * (lo_phase + omega * n))\n        lo_phase = (lo_phase + omega * len(samples)) % (2 * np.pi)",
         "detail": "GNURadioCode.sdrtesting",
+        "documentation": {}
+    },
+    {
+        "label": "load_iq",
+        "kind": 2,
+        "importPath": "GNURadioCode.waterfallmaker",
+        "description": "GNURadioCode.waterfallmaker",
+        "peekOfCode": "def load_iq(path):\n    x = np.fromfile(path, dtype=np.complex64)\n    if x.size == 0:\n        raise SystemExit(f\"'{path}' is empty or not readable as complex64 IQ.\")\n    return x\ndef spectrogram(x, fs, win_s, hop_frac=0.5):\n    nwin = int(win_s * fs)\n    hop = max(1, int(nwin * hop_frac))\n    w = np.hanning(nwin)\n    cols, times = [], []",
+        "detail": "GNURadioCode.waterfallmaker",
+        "documentation": {}
+    },
+    {
+        "label": "spectrogram",
+        "kind": 2,
+        "importPath": "GNURadioCode.waterfallmaker",
+        "description": "GNURadioCode.waterfallmaker",
+        "peekOfCode": "def spectrogram(x, fs, win_s, hop_frac=0.5):\n    nwin = int(win_s * fs)\n    hop = max(1, int(nwin * hop_frac))\n    w = np.hanning(nwin)\n    cols, times = [], []\n    for s in range(0, len(x) - nwin, hop):\n        seg = x[s:s + nwin] * w\n        cols.append(np.fft.fftshift(np.abs(np.fft.fft(seg))))\n        times.append((s + nwin / 2) / fs)\n    S = 20 * np.log10(np.array(cols).T + 1e-9)",
+        "detail": "GNURadioCode.waterfallmaker",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "GNURadioCode.waterfallmaker",
+        "description": "GNURadioCode.waterfallmaker",
+        "peekOfCode": "def main():\n    ap = argparse.ArgumentParser(description=\"Waterfall (spectrogram) from a .c64 capture\")\n    ap.add_argument(\"--iq\", required=True)\n    ap.add_argument(\"--fs\", type=float, default=8000.0)\n    ap.add_argument(\"--win\", type=float, default=0.5, help=\"display FFT window (s)\")\n    ap.add_argument(\"--pilot-offset\", type=float, default=3000.0)\n    ap.add_argument(\"--zoom\", type=float, default=12.0, help=\"+/- Hz around source for zoom panel\")\n    ap.add_argument(\"--out\", default=\"waterfall\")\n    a = ap.parse_args()\n    x = load_iq(a.iq)",
+        "detail": "GNURadioCode.waterfallmaker",
         "documentation": {}
     },
     {
