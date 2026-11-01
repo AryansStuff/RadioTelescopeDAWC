@@ -1,21 +1,10 @@
 #!/usr/bin/env python3
 """
-analyze_shift.py  (peak-tracking + before/after visualization)
+Compare a stationary and a rotating .dat spectrum: measure the per-peak
+frequency shift and width growth of strong RFI peaks, and plot before/after.
+Legacy high-speed method; pairs with recordspectrum.py.
 
-Measures the average before->after frequency SHIFT and peak BROADENING of RFI
-peaks between a stationary ("before") and rotating ("after") recording, and
-renders a presentable before/after figure.
-
-Method (generalises Figure 3 of the DAWC paper):
-  1. Load both spectra.
-  2. Detect strong RFI peaks ONCE, in the stationary spectrum.
-  3. For each, locate the same peak in a small window of the rotating spectrum,
-     refined with quadratic (sub-bin) interpolation -> SHIFT.
-  4. Compare second-moment widths before vs after -> BROADENING.
-  5. Average across peaks; judge against a stationary-vs-stationary null floor.
-
-    python3 analyze_shift.py stationary.dat rotating.dat
-    python3 analyze_shift.py stationary.dat rotating.dat --plot shift.png
+    python3 runthis.py stationary.dat rotating.dat --plot shift.png
 """
 
 import argparse

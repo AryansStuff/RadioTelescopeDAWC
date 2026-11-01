@@ -1,0 +1,7 @@
+cffi==2.0.0
+numpy==2.4.6
+pycparser==3.0
+pyrtlsdr==0.2.91
+scipy==1.17.1
+setuptools==80.10.2
+sounddevice==0.5.5

@@ -1,25 +1,14 @@
 #!/usr/bin/env python3
 """
-record_spectrum.py
-Reproduces the GNU Radio data-analysis sequence from Figure 4 of the DAWC paper:
+GNU Radio spectrum recorder. Legacy high-speed method, kept for reference; the
+identification pipeline uses dopplerwaterfall.py instead.
 
-    Soapy RTL-SDR Source
-      -> Frequency Xlating FIR Filter   (cut broadband noise / select the band)
-      -> Stream to Vector (8192)
-      -> FFT (8192)                      (frequency domain)
-      -> Complex to Mag^2                (power)
-      -> Single Pole IIR Filter          (time averaging, decaying memory)
-      -> Log10 (x10)                     (scale to dB)
-      -> File Sink                       (save spectra to disk)
+Records time-averaged FFT frames to a .dat file. Record once stationary and
+once rotating, then compare the two with runthis.py. Targets GNU Radio 3.10; if
+the soapy source errors, use the osmosdr source instead.
 
-Run it ONCE pointed at the sun while STATIONARY, and ONCE while ROTATING,
-writing to two different files. Then analyse with analyze_shift.py.
-
-    python3 record_spectrum.py stationary.dat --seconds 600
-    python3 record_spectrum.py rotating.dat   --seconds 600
-
-NOTE: GNU Radio block constructors vary slightly between versions (this targets
-3.10). If the soapy source line errors, see the osmosdr alternative noted below.
+    python3 recordspectrum.py stationary.dat --seconds 600
+    python3 recordspectrum.py rotating.dat   --seconds 600
 """
 
 import time

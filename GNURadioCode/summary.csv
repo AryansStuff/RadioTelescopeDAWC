@@ -1,0 +1,5 @@
+rpm,theoretical_hz,measured_hz,measured_err_hz,recovered_radius_m,residual_offset_hz,median_snr_db
+0,0.0000,4.1815,0.0000,nan,1.7440,7.11
+2,0.9923,2.4687,1.4588,2.4879,3.5026,7.98
+4,1.9846,1.9971,0.0365,1.0063,0.0130,13.45
+10,4.9616,1.8500,1.2526,0.3729,4.9659,5.38
